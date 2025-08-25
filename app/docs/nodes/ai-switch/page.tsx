@@ -1,16 +1,17 @@
 "use client"
 
 import React from 'react';
-import { Brain, Database, Settings, Code, Zap, AlertTriangle, CheckCircle, ExternalLink, Route, GitBranch } from 'lucide-react';
-import { Button, Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui';
+import { Brain, Zap, CheckCircle, ExternalLink, GitBranch, AlertTriangle } from 'lucide-react';
+import CodeBlock from '@/components/ui/CodeBlock';
+import CollapsibleSection from '@/components/ui/CollapsibleSection';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui';
 import Callout from "@/components/ui/Callout";
-import CodeBlock from "@/components/ui/CodeBlock";
-import CollapsibleSection from "@/components/ui/CollapsibleSection";
 import Link from 'next/link';
+import { Button } from '@/components/ui';
 
-export default function AISwitchNode() {
+export default function AISwitchNodeDocumentation(): JSX.Element {
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto px-4">
       {/* Header */}
       <div className="mb-8">
         <div className="flex items-center gap-3 mb-4">
@@ -22,46 +23,28 @@ export default function AISwitchNode() {
             <p className="text-neutral-400">Use AI to intelligently route workflow execution based on prompt analysis</p>
           </div>
         </div>
-        
-        <div className="bg-neutral-800 rounded-xl p-6 border border-neutral-700">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div>
-              <h3 className="font-semibold text-neutral-200 mb-2">Node Type</h3>
-              <p className="text-neutral-400">Conditional</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-neutral-200 mb-2">Category</h3>
-              <p className="text-neutral-400">AI & Logic</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-neutral-200 mb-2">Icon</h3>
-              <p className="text-neutral-400">AI Brain</p>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Overview */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-4">Overview</h2>
         <p className="text-neutral-300 mb-6">
-          The <strong>AI Router</strong> node is a powerful conditional node that uses Large Language Models (LLMs) to analyze prompts 
-          and intelligently select which downstream node to follow. Instead of traditional rule-based routing, this node leverages 
-          AI to understand context and make smart decisions about workflow execution paths.
+          The AI Router node uses Large Language Models (LLMs) to analyze a user-provided prompt and intelligently determine
+          the most appropriate downstream node to execute next. It maps downstream nodes to lettered options (A, B, C, …)
+          and optionally includes a “NONE” option to allow for no execution when none of the branches are suitable.
         </p>
-        
+
         <div className="bg-neutral-800 rounded-xl p-6 border border-neutral-700">
           <h3 className="font-semibold mb-3 flex items-center gap-2">
             <Zap className="w-5 h-5 text-yellow-500" />
-            Key Features
+            Key Concepts
           </h3>
           <ul className="text-neutral-300 space-y-2">
-            <li>• <strong>AI-Powered Routing:</strong> Uses LLMs to analyze prompts and select optimal execution paths</li>
-            <li>• <strong>Dynamic Node Analysis:</strong> Automatically discovers and analyzes available downstream nodes</li>
-            <li>• <strong>Letter-Based Selection:</strong> Maps downstream nodes to letters (A, B, C, D...) for easy AI reference</li>
-            <li>• <strong>Flexible Execution:</strong> Option to allow no execution if no suitable path exists</li>
-            <li>• <strong>Context-Aware Decisions:</strong> Considers node descriptions, types, and categories when routing</li>
-            <li>• <strong>Cost Tracking:</strong> Monitors LLM usage costs for optimization</li>
+            <li>• <strong>AI-Powered Routing:</strong> Analyze prompts to select the best downstream path</li>
+            <li>• <strong>Dynamic Node Discovery:</strong> Detects all connected downstream nodes</li>
+            <li>• <strong>Letter Mapping:</strong> Alphanumeric references (A, B, C, …) for AI guidance</li>
+            <li>• <strong>No Execution Option:</strong> Optional support to skip execution when appropriate</li>
+            <li>• <strong>Cost Awareness:</strong> Returns LLM usage cost for observability</li>
           </ul>
         </div>
       </section>
@@ -69,31 +52,25 @@ export default function AISwitchNode() {
       {/* Prerequisites */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-4">Prerequisites</h2>
-        
+
         <div className="space-y-4">
           <Card className="border-neutral-700">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Brain className="w-5 h-5 text-purple-500" />
+                <GitBranch className="w-5 h-5 text-blue-500" />
                 AI Service Access
               </CardTitle>
-              <CardDescription>
-                Must have access to LLM services
-              </CardDescription>
+              <CardDescription>Must have access to LLM services</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">LLM service properly configured and accessible</span>
+                  <span className="text-sm">Valid API keys configured for the LLM provider</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">Valid API keys and authentication set up</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">Sufficient API credits for LLM calls</span>
+                  <span className="text-sm">Sufficient quota or credits for LLM calls</span>
                 </div>
               </div>
             </CardContent>
@@ -103,19 +80,16 @@ export default function AISwitchNode() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <GitBranch className="w-5 h-5 text-blue-500" />
-                Workflow Structure
+                Workflow & Registry Access
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-2">
                 <div className="text-sm text-neutral-300">
-                  <strong>Downstream Nodes:</strong> Must have at least one connected downstream node for routing
+                  <strong>Downstream Nodes:</strong> At least one connected downstream node is required for routing
                 </div>
                 <div className="text-sm text-neutral-300">
-                  <strong>Node Limits:</strong> Maximum 26 downstream nodes supported (A-Z mapping)
-                </div>
-                <div className="text-sm text-neutral-300">
-                  <strong>Proper Connections:</strong> Nodes must be properly connected in the workflow graph
+                  <strong>Node Limits:</strong> Up to 26 downstream nodes are supported (A-Z)
                 </div>
               </div>
             </CardContent>
@@ -134,10 +108,7 @@ export default function AISwitchNode() {
                   <strong>Workflow Service:</strong> Access to workflow service for node discovery
                 </div>
                 <div className="text-sm text-neutral-300">
-                  <strong>Node Registry:</strong> Access to node registry for configuration information
-                </div>
-                <div className="text-sm text-neutral-300">
-                  <strong>Enum Switch Tool:</strong> LLM tool for structured decision making
+                  <strong>Node Registry:</strong> Access to node configuration information
                 </div>
               </div>
             </CardContent>
@@ -148,7 +119,7 @@ export default function AISwitchNode() {
       {/* Node Configuration */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-4">Node Configuration</h2>
-        
+
         <CollapsibleSection title="Input Fields" defaultOpen={true}>
           <div className="space-y-4">
             <Card className="border-neutral-700">
@@ -170,18 +141,19 @@ export default function AISwitchNode() {
                       </div>
                       <div>
                         <span className="text-neutral-400">Example:</span>
-                        <span className="ml-2 text-neutral-200">"Route to the node that handles email processing"</span>
+                        <span className="ml-2 text-neutral-200">"Route to the node handling email processing"</span>
                       </div>
                     </div>
                     <p className="text-neutral-400 mt-2">
-                      Describes how the LLM should choose a branch. The AI will analyze this prompt along with available 
-                      downstream nodes to make the routing decision.
+                      Describes how the LLM should choose a branch. The AI will evaluate this prompt along with downstream node information.
                     </p>
                   </div>
                 </div>
               </CardContent>
             </Card>
+          </div>
 
+          <div className="mt-4">
             <Card className="border-neutral-700">
               <CardHeader>
                 <CardTitle>Optional Fields</CardTitle>
@@ -214,7 +186,7 @@ export default function AISwitchNode() {
           </div>
         </CollapsibleSection>
 
-        <CollapsibleSection title="Output Fields" defaultOpen={false}>
+        <CollapsibleSection title="Output Fields" defaultOpen={false} >
           <div className="space-y-4">
             <Card className="border-neutral-700">
               <CardContent className="pt-6">
@@ -224,7 +196,7 @@ export default function AISwitchNode() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                       <div>
                         <span className="text-neutral-400">Type:</span>
-                        <span className="ml-2 text-neutral-200">array[number]</span>
+                        <span className="ml-2 text-neutral-200">array<number></span>
                       </div>
                       <div>
                         <span className="text-neutral-400">Branch Output:</span>
@@ -232,11 +204,10 @@ export default function AISwitchNode() {
                       </div>
                     </div>
                     <p className="text-neutral-400 mt-2">
-                      Array containing the index of the selected branch. Used by the workflow engine to determine 
-                      which execution path to follow.
+                      Array containing the index of the selected branch. Used by the workflow engine to determine the path.
                     </p>
                   </div>
-                  
+
                   <div>
                     <h4 className="font-semibold mb-2">Selected Branch</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
@@ -246,11 +217,11 @@ export default function AISwitchNode() {
                       </div>
                       <div>
                         <span className="text-neutral-400">Description:</span>
-                        <span className="ml-2 text-neutral-200">The name of the branch that was selected by the AI</span>
+                        <span className="ml-2 text-neutral-200">The name of the branch selected by the AI</span>
                       </div>
                     </div>
                     <p className="text-neutral-400 mt-2">
-                      Human-readable name of the selected branch, useful for logging, debugging, and workflow monitoring.
+                      Human-readable name of the chosen branch for logging and debugging.
                     </p>
                   </div>
                 </div>
@@ -263,41 +234,33 @@ export default function AISwitchNode() {
       {/* Technical Details */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-4">Technical Details</h2>
-        
+
         <div className="space-y-6">
           <Card className="border-neutral-700">
             <CardHeader>
               <CardTitle>AI Decision Process</CardTitle>
-              <CardDescription>
-                How the node analyzes prompts and makes routing decisions
-              </CardDescription>
+              <CardDescription>How the node analyzes prompts and makes routing decisions</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
                 <div>
                   <h4 className="font-semibold mb-2">Downstream Node Discovery</h4>
                   <p className="text-neutral-400 text-sm mb-3">
-                    The node automatically discovers all connected downstream nodes and creates a letter-based mapping:
+                    The node discovers all connected downstream nodes and creates a letter-based mapping A, B, C, …
                   </p>
                   <ul className="text-sm text-neutral-300 space-y-1">
-                    <li>• <strong>Node A:</strong> First downstream node (index 0)</li>
-                    <li>• <strong>Node B:</strong> Second downstream node (index 1)</li>
-                    <li>• <strong>Node C:</strong> Third downstream node (index 2)</li>
-                    <li>• <strong>Maximum:</strong> 26 nodes (A-Z range)</li>
+                    <li>• Node A: first downstream node (index 0)</li>
+                    <li>• Node B: second downstream node (index 1)</li>
+                    <li>• Maximum of 26 nodes (A-Z)</li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">Enhanced Prompt Creation</h4>
                   <p className="text-neutral-400 text-sm">
-                    The node creates an enhanced prompt that includes detailed information about each available downstream node:
+                    The enhanced prompt includes the downstream node details, their types, descriptions, and full configuration
+                    JSON, along with the letter mapping for reference.
                   </p>
-                  <ul className="text-sm text-neutral-300 space-y-1 mt-2">
-                    <li>• Node title and type</li>
-                    <li>• Node description and category</li>
-                    <li>• Full node configuration JSON</li>
-                    <li>• Letter mapping for easy reference</li>
-                  </ul>
                 </div>
               </div>
             </CardContent>
@@ -306,33 +269,29 @@ export default function AISwitchNode() {
           <Card className="border-neutral-700">
             <CardHeader>
               <CardTitle>LLM Integration</CardTitle>
-              <CardDescription>
-                How the node interfaces with Large Language Models
-              </CardDescription>
+              <CardDescription>How the node interfaces with Large Language Models</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
                 <div>
                   <h4 className="font-semibold mb-2">Enum Switch Tool</h4>
                   <p className="text-neutral-400 text-sm">
-                    Uses a specialized LLM tool that constrains the AI's response to valid options only. This ensures 
-                    the AI can only select from the available downstream nodes or "NONE" if no execution is allowed.
+                    Uses a specialized LLM tool that constrains the AI’s response to valid options only, including the “NONE” option when allowed.
                   </p>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">Cost Tracking</h4>
                   <p className="text-neutral-400 text-sm">
-                    Monitors and returns the cost of LLM API calls, allowing users to track and optimize their AI usage 
-                    expenses across workflows.
+                    Returns the cost of LLM calls for observability and potential cost optimization.
                   </p>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">Fallback Handling</h4>
                   <p className="text-neutral-400 text-sm">
-                    If the LLM call fails, the node gracefully falls back to selecting the first available downstream 
-                    node, ensuring workflow execution continues even with AI service issues.
+                    If the LLM call fails, the node gracefully falls back to the first available downstream node to
+                    ensure workflow progress.
                   </p>
                 </div>
               </div>
@@ -342,33 +301,28 @@ export default function AISwitchNode() {
           <Card className="border-neutral-700">
             <CardHeader>
               <CardTitle>Branch Selection Logic</CardTitle>
-              <CardDescription>
-                How the selected branch is processed and executed
-              </CardDescription>
+              <CardDescription>How the selected branch is processed and executed</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
                 <div>
                   <h4 className="font-semibold mb-2">Index Calculation</h4>
                   <p className="text-neutral-400 text-sm">
-                    Converts the AI's letter selection back to a numerical index for workflow execution. For example, 
-                    if the AI selects "C", the node calculates index 2 and routes to the third downstream node.
+                    Converts the AI’s letter selection back to a numeric index. Example: selecting "C" routes to index 2.
                   </p>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">No Execution Handling</h4>
                   <p className="text-neutral-400 text-sm">
-                    When "Allow No Execution" is enabled and the AI selects "NONE", the workflow continues without 
-                    executing any downstream branches, useful for conditional workflows that may not always need execution.
+                    When “Allow No Execution” is enabled and the AI selects NONE, the workflow continues without any downstream execution.
                   </p>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">Validation</h4>
                   <p className="text-neutral-400 text-sm">
-                    Validates that the selected index is within the valid range of downstream nodes, throwing an error 
-                    if the AI somehow selects an invalid option.
+                    Validates that the selected index is within the valid range. If an invalid option is produced, an error is thrown.
                   </p>
                 </div>
               </div>
@@ -377,17 +331,15 @@ export default function AISwitchNode() {
         </div>
       </section>
 
-      {/* Examples */}
+      {/* Examples & Use Cases */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-4">Examples & Use Cases</h2>
-        
+
         <div className="space-y-6">
           <Card className="border-neutral-700">
             <CardHeader>
               <CardTitle>Content Type Routing</CardTitle>
-              <CardDescription>
-                Route based on content analysis
-              </CardDescription>
+              <CardDescription>Route based on content analysis</CardDescription>
             </CardHeader>
             <CardContent>
               <CodeBlock
@@ -397,7 +349,7 @@ export default function AISwitchNode() {
                 lang="json"
               />
               <p className="text-neutral-400 mt-3">
-                The AI will analyze the content and route to the most appropriate processing node based on the content type.
+                The AI will analyze the content and route to the most appropriate processing node based on content type.
               </p>
             </CardContent>
           </Card>
@@ -405,9 +357,7 @@ export default function AISwitchNode() {
           <Card className="border-neutral-700">
             <CardHeader>
               <CardTitle>Priority-Based Routing</CardTitle>
-              <CardDescription>
-                Route based on urgency or priority
-              </CardDescription>
+              <CardDescription>Route based on urgency or priority</CardDescription>
             </CardHeader>
             <CardContent>
               <CodeBlock
@@ -424,10 +374,8 @@ export default function AISwitchNode() {
 
           <Card className="border-neutral-700">
             <CardHeader>
-              <CardTitle>Conditional Execution with No-Execution</CardTitle>
-              <CardDescription>
-                Allow the AI to skip execution when appropriate
-              </CardDescription>
+              <CardTitle>No-Execution Routing</CardTitle>
+              <CardDescription>Allow the AI to skip execution when appropriate</CardDescription>
             </CardHeader>
             <CardContent>
               <CodeBlock
@@ -448,14 +396,12 @@ export default function AISwitchNode() {
       {/* Workflow Examples */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-4">Workflow Examples</h2>
-        
+
         <div className="space-y-6">
           <Card className="border-neutral-700">
             <CardHeader>
               <CardTitle>Intelligent Content Processing Pipeline</CardTitle>
-              <CardDescription>
-                Route different content types to specialized processors
-              </CardDescription>
+              <CardDescription>Route different content types to specialized processors</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
@@ -465,7 +411,7 @@ export default function AISwitchNode() {
                     <div>📥 Input → 🧠 AI Router → 📧 Email Processor / 📄 Doc Analyzer / 🖼️ Image Processor → 📊 Results</div>
                   </div>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">AI Router Configuration</h4>
                   <CodeBlock
@@ -475,13 +421,13 @@ export default function AISwitchNode() {
                     lang="json"
                   />
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">Downstream Nodes</h4>
                   <ul className="text-sm text-neutral-300 space-y-1">
-                    <li>• <strong>Node A:</strong> Email Processor - Handles email content and metadata</li>
-                    <li>• <strong>Node B:</strong> Document Analyzer - Processes text documents and PDFs</li>
-                    <li>• <strong>Node C:</strong> Image Processor - Analyzes and processes images</li>
+                    <li>• <strong>Node A:</strong> Email Processor</li>
+                    <li>• <strong>Node B:</strong> Document Analyzer</li>
+                    <li>• <strong>Node C:</strong> Image Processor</li>
                   </ul>
                 </div>
               </div>
@@ -491,20 +437,17 @@ export default function AISwitchNode() {
           <Card className="border-neutral-700">
             <CardHeader>
               <CardTitle>Customer Support Ticket Routing</CardTitle>
-              <CardDescription>
-                Automatically route support tickets to appropriate teams
-              </CardDescription>
+              <CardDescription>Automatically route support tickets to appropriate teams</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
                 <div className="bg-neutral-800 rounded-lg p-4">
                   <h4 className="font-semibold mb-2">Use Case</h4>
                   <p className="text-sm text-neutral-400">
-                    Automatically analyze customer support tickets and route them to the most appropriate support team 
-                    based on the issue type, urgency, and team expertise.
+                    Analyze ticket content and urgency to route to engineering, finance, or customer service, with a priority queue for high urgency.
                   </p>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">AI Router Prompt</h4>
                   <CodeBlock
@@ -514,14 +457,13 @@ export default function AISwitchNode() {
                     lang="json"
                   />
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">Implementation</h4>
-                  <ul className="list-disc list-inside space-y-1 text-sm text-neutral-300">
+                  <ul className="list-disc list-inside text-sm text-neutral-300 space-y-1">
                     <li>AI analyzes ticket content and urgency</li>
                     <li>Routes to appropriate team based on issue type</li>
                     <li>Handles edge cases and unclear routing scenarios</li>
-                    <li>Provides consistent and fair ticket distribution</li>
                   </ul>
                 </div>
               </div>
@@ -533,7 +475,7 @@ export default function AISwitchNode() {
       {/* Best Practices */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-4">Best Practices</h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card className="border-neutral-700">
             <CardHeader>
@@ -544,13 +486,13 @@ export default function AISwitchNode() {
             </CardHeader>
             <CardContent>
               <ul className="space-y-2 text-sm text-neutral-300">
-                <li>• Write clear, specific prompts that describe routing logic</li>
-                <li>• Use descriptive node titles and descriptions for better AI understanding</li>
-                <li>• Limit downstream nodes to 26 or fewer for optimal performance</li>
-                <li>• Test prompts with various input scenarios</li>
+                <li>• Write clear, specific prompts describing routing logic</li>
+                <li>• Use descriptive node titles and descriptions</li>
+                <li>• Keep downstream nodes to 26 or fewer for optimal performance</li>
+                <li>• Test prompts with varied input scenarios</li>
                 <li>• Monitor LLM costs and optimize prompt efficiency</li>
                 <li>• Use "Allow No Execution" when appropriate</li>
-                <li>• Provide context about what each downstream node does</li>
+                <li>• Provide context about each downstream node's purpose</li>
               </ul>
             </CardContent>
           </Card>
@@ -564,13 +506,11 @@ export default function AISwitchNode() {
             </CardHeader>
             <CardContent>
               <ul className="space-y-2 text-sm text-neutral-300">
-                <li>• Don't write overly complex or ambiguous prompts</li>
-                <li>• Avoid having too many downstream nodes (max 26)</li>
-                <li>• Don't ignore LLM costs in high-volume workflows</li>
-                <li>• Avoid prompts that require subjective judgment</li>
-                <li>• Don't assume the AI will always make perfect decisions</li>
-                <li>• Avoid routing logic that changes frequently</li>
-                <li>• Don't forget to handle edge cases in your prompts</li>
+                <li>• Avoid overly complex or ambiguous prompts</li>
+                <li>• Do not exceed 26 downstream nodes</li>
+                <li>• Don’t ignore LLM costs in high-volume workflows</li>
+                <li>• Avoid prompts requiring subjective judgment</li>
+                <li>• Don’t assume perfect AI decisions; plan for edge cases</li>
               </ul>
             </CardContent>
           </Card>
@@ -578,9 +518,7 @@ export default function AISwitchNode() {
 
         <div className="mt-6">
           <Callout emoji="💡" color="border-purple-500">
-            <strong>Pro Tip:</strong> When designing prompts, think about how you would explain the routing logic to 
-            another person. Clear, specific instructions with examples often lead to better AI decision-making and 
-            more predictable workflow behavior.
+            <strong>Pro Tip:</strong> When designing prompts, explain the routing logic as you would to a teammate. Clear, specific instructions with examples improve AI decision-making and predictability.
           </Callout>
         </div>
       </section>
@@ -588,7 +526,7 @@ export default function AISwitchNode() {
       {/* Troubleshooting */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-4">Troubleshooting</h2>
-        
+
         <div className="space-y-4">
           <Card className="border-neutral-700">
             <CardHeader>
@@ -602,44 +540,41 @@ export default function AISwitchNode() {
                 <div>
                   <h4 className="font-semibold mb-2">No Downstream Nodes Found</h4>
                   <p className="text-neutral-400 text-sm mb-2">
-                    <strong>Symptoms:</strong> Node fails with "No downstream nodes found" error
+                    Symptoms: Node reports "No downstream nodes found".
                   </p>
                   <p className="text-neutral-400 text-sm">
-                    <strong>Solution:</strong> Ensure the AI Router node is properly connected to at least one downstream node. 
-                    Check your workflow connections and verify the node placement.
+                    Solution: Ensure the AI Router is connected to at least one downstream node and check workflow connections.
                   </p>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">LLM Service Errors</h4>
                   <p className="text-neutral-400 text-sm mb-2">
-                    <strong>Symptoms:</strong> Node falls back to default routing or fails to execute
+                    Symptoms: Node falls back to default routing or fails to execute.
                   </p>
                   <p className="text-neutral-400 text-sm">
-                    <strong>Solution:</strong> Check your LLM service configuration, API keys, and service availability. 
-                    The node will fall back to the first downstream node if LLM calls fail.
+                    Solution: Verify LLM service configuration, API keys, and service availability. The node will fall back
+                    to the first downstream node if LLM calls fail.
                   </p>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">Unexpected Routing Decisions</h4>
                   <p className="text-neutral-400 text-sm mb-2">
-                    <strong>Symptoms:</strong> AI makes routing decisions that don't match expectations
+                    Symptoms: AI routes to a node not expected.
                   </p>
                   <p className="text-neutral-400 text-sm">
-                    <strong>Solution:</strong> Review and refine your prompt. Make it more specific, provide clearer 
-                    examples, and ensure downstream node descriptions are accurate and helpful.
+                    Solution: Refine prompts with clearer examples and ensure downstream node descriptions accurately reflect capabilities.
                   </p>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">High LLM Costs</h4>
                   <p className="text-neutral-400 text-sm mb-2">
-                    <strong>Symptoms:</strong> Unexpectedly high costs from frequent AI Router usage
+                    Symptoms: Elevated costs due to AI Router usage.
                   </p>
                   <p className="text-neutral-400 text-sm">
-                    <strong>Solution:</strong> Optimize prompts to be more concise, implement caching strategies, 
-                    and consider using simpler conditional logic for high-volume workflows.
+                    Solution: Optimize prompts, cache results, and consider simpler routing logic for high-volume workflows.
                   </p>
                 </div>
               </div>
@@ -651,7 +586,7 @@ export default function AISwitchNode() {
       {/* Related Resources */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-4">Related Resources</h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Link href="/docs/nodes/llm-prompt">
             <Button variant="outline" className="justify-start h-auto p-4 w-full">
@@ -662,7 +597,7 @@ export default function AISwitchNode() {
               <ExternalLink className="w-4 h-4 ml-auto" />
             </Button>
           </Link>
-          
+
           <Link href="/docs/nodes/fetch-webpage">
             <Button variant="outline" className="justify-start h-auto p-4 w-full">
               <div className="text-left">
@@ -672,7 +607,7 @@ export default function AISwitchNode() {
               <ExternalLink className="w-4 h-4 ml-auto" />
             </Button>
           </Link>
-          
+
           <Link href="/docs/ai-workflows-explained">
             <Button variant="outline" className="justify-start h-auto p-4 w-full">
               <div className="text-left">
@@ -682,7 +617,7 @@ export default function AISwitchNode() {
               <ExternalLink className="w-4 h-4 ml-auto" />
             </Button>
           </Link>
-          
+
           <Link href="/docs/nodes">
             <Button variant="outline" className="justify-start h-auto p-4 w-full">
               <div className="text-left">
