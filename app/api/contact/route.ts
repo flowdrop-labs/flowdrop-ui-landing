@@ -5,11 +5,11 @@ import { config } from 'dotenv';
 
 config();
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST(req: NextRequest) {
+export async function POST(req: NextRequest, ctx: any) {
+  const resend = new Resend(ctx.env.RESEND_API_KEY);
   try {
-    const { name, email, subject, message } = await req.json();
+    const { name, email, subject, message } = await req.json() as any;
 
     // Validate required fields
     if (!name || !email || !subject || !message) {

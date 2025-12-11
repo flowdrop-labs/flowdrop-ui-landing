@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Download, LogOut } from 'lucide-react';
+import { LooseObject } from '@/types/common';
 
 interface SubscriberListEmail {
   email: string;
@@ -26,7 +27,7 @@ export default function AdminPage() {
   const fetchEmails = async () => {
     try {
       const response = await fetch('/api/admin/emails');
-      const data = await response.json();
+      const data = await response.json() as LooseObject;
       if (data.success) {
         setEmails(data.emails);
       }
@@ -38,7 +39,7 @@ export default function AdminPage() {
   const fetchCount = async () => {
     try {
       const response = await fetch('/api/subscriberList');
-      const data = await response.json();
+      const data = await response.json<LooseObject>();
       if (data.success) {
         setTotalCount(data.count);
       }

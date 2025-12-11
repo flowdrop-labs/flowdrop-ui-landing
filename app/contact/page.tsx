@@ -7,6 +7,7 @@ import { Mail, Check } from 'lucide-react';
 import { CTAButton, Input, Card, CardContent, Section } from '@/components/ui';
 import { typography } from '@/lib/styles';
 import { cn } from '@/lib/utils';
+import { LooseObject } from '@/types/common';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -29,7 +30,7 @@ export default function ContactPage() {
         body: JSON.stringify(formData),
       });
 
-      const data = await res.json();
+      const data = await res.json<LooseObject>();
 
       if (res.ok && data.success) {
         setIsSubmitted(true);
