@@ -14,7 +14,7 @@ if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
 if (typeof window !== 'undefined' && !posthog.__loaded) {
   // Defer PostHog initialization to improve initial page load
   const initPostHog = () => {
-    const posthogKey = process.env.NEXT_PUBLIC_POSTHOG_KEY || 'phc_NReJaGbNSQWvDRslkiRHJghtTALOHPUSxP5mKdYqbHl'
+    const posthogKey = process.env.NEXT_PUBLIC_POSTHOG_KEY
     
     if (posthogKey && posthogKey !== 'undefined') {
       posthog.init(posthogKey, {
