@@ -10,10 +10,10 @@
     // see https://developers.cloudflare.com/workers/configuration/compatibility-flags/#global-fetch-strictly-public
     "global_fetch_strictly_public",
   ],
-  "assets": {
-    "directory": ".open-next/assets",
-    "binding": "ASSETS",
-  },
+//   "assets": {
+//     "directory": ".open-next/assets",
+//     "binding": "ASSETS",
+//   },
   "services": [
     {
       "binding": "WORKER_SELF_REFERENCE",
