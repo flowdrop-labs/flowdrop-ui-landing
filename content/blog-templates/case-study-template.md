@@ -167,7 +167,7 @@ Could [Solution] deliver similar results for your organization?
 
 ---
 
-**Want to achieve similar results?** [Start your free trial](https://flowdrop.xyz/pricing) or [talk to our team](/contact) about your specific needs.
+**Want to achieve similar results?** [Start your free trial](https://flowdrop.ai/pricing) or [talk to our team](/contact) about your specific needs.
 
 **Read more success stories**: Browse [case studies](/blog/category/case-studies) from companies like yours.
 

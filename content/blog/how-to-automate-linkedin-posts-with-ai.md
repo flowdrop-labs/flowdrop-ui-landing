@@ -217,7 +217,7 @@ Your audience doesn't care if you wrote the post at 6am or if AI helped you draf
 
 <section-header text="Start Posting Smarter"></section-header>
 
-Ready to automate your LinkedIn presence? [Talk to Flowdrop](https://app.flowdrop.xyz/) and build your workflow in minutes.
+Ready to automate your LinkedIn presence? [Talk to Flowdrop](https://app.flowdrop.ai/) and build your workflow in minutes.
 
 Tell it what you want. Watch it build. Start posting consistently.
 

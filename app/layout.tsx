@@ -57,20 +57,20 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://flowdrop.xyz'),
+  metadataBase: new URL('https://flowdrop.ai'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: "Flowdrop - AI Workflow Builder for Non-Coders",
     description: "Flowdrop is a no-code, AI-powered workflow builder that deploys production automations in under five minutes.",
-    url: 'https://flowdrop.xyz',
+    url: 'https://flowdrop.ai',
     siteName: 'Flowdrop',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://flowdrop.xyz/website-preview.png',
+        url: 'https://flowdrop.ai/website-preview.png',
         width: 1200,
         height: 630,
         alt: 'Flowdrop - AI Workflow Builder',
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Flowdrop - AI Workflow Builder for Non-Coders",
     description: "Flowdrop is a no-code, AI-powered workflow builder that deploys production automations in under five minutes.",
-    images: ['https://flowdrop.xyz/website-preview.png'],
+    images: ['https://flowdrop.ai/website-preview.png'],
   },
   robots: {
     index: true,
@@ -133,8 +133,8 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "Flowdrop",
               "alternateName": "Flowdrop",
-              "url": "https://flowdrop.xyz",
-              "logo": "https://flowdrop.xyz/website-preview.png",
+              "url": "https://flowdrop.ai",
+              "logo": "https://flowdrop.ai/website-preview.png",
               "description": "Flowdrop is a no-code, AI-powered workflow builder that deploys production automations in under five minutes.",
               "foundingDate": "2024",
               "sameAs": [
@@ -151,11 +151,11 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "Flowdrop",
-              "url": "https://flowdrop.xyz",
+              "url": "https://flowdrop.ai",
               "description": "AI workflow builder for non-coders. Build and deploy production automations in under five minutes.",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://flowdrop.xyz/search?q={search_term_string}",
+                "target": "https://flowdrop.ai/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             })
@@ -168,7 +168,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
               "name": "Flowdrop",
-              "url": "https://flowdrop.xyz",
+              "url": "https://flowdrop.ai",
               "description": "AI-powered workflow builder that deploys production automations in under five minutes.",
               "applicationCategory": "BusinessApplication",
               "operatingSystem": "Web Browser",

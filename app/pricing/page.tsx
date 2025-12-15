@@ -30,7 +30,7 @@ export default function PricingPage() {
         'Community support'
       ],
       cta: 'Get Started',
-      ctaAction: () => window.location.href = 'https://app.flowdrop.xyz/settings?page=billing'
+      ctaAction: () => window.location.href = 'https://app.flowdrop.ai/settings?page=billing'
     },
     {
       name: 'Solo',
@@ -46,7 +46,7 @@ export default function PricingPage() {
         'Enables model selectors'
       ],
       cta: 'Get Started',
-      ctaAction: () => window.location.href = 'https://app.flowdrop.xyz/settings?page=billing'
+      ctaAction: () => window.location.href = 'https://app.flowdrop.ai/settings?page=billing'
     },
     {
       name: 'Builder',
@@ -63,7 +63,7 @@ export default function PricingPage() {
         'Enables model selectors'
       ],
       cta: 'Get Started',
-      ctaAction: () => window.location.href = 'https://app.flowdrop.xyz/settings?page=billing'
+      ctaAction: () => window.location.href = 'https://app.flowdrop.ai/settings?page=billing'
     },
     {
       name: 'Growth',
@@ -82,7 +82,7 @@ export default function PricingPage() {
         'Dedicated support'
       ],
       cta: 'Get Started',
-      ctaAction: () => window.location.href = 'https://app.flowdrop.xyz/settings?page=billing'
+      ctaAction: () => window.location.href = 'https://app.flowdrop.ai/settings?page=billing'
     },
     {
       name: 'Enterprise',
@@ -101,7 +101,7 @@ export default function PricingPage() {
         'Enables model selectors'
       ],
       cta: 'Get Started',
-      ctaAction: () => window.location.href = 'https://app.flowdrop.xyz/settings?page=billing'
+      ctaAction: () => window.location.href = 'https://app.flowdrop.ai/settings?page=billing'
     },
   ];
 
@@ -142,7 +142,7 @@ export default function PricingPage() {
                 className="bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] hover:from-[#8B5CF6]/90 hover:to-[#7C3AED]/90 text-white font-bold py-4 px-8 rounded-full text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => window.location.href = 'https://app.flowdrop.xyz/settings?page=billing'}
+                onClick={() => window.location.href = 'https://app.flowdrop.ai/settings?page=billing'}
               >
                 Start Building Now
               </motion.button>

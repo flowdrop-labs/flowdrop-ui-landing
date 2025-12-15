@@ -52,7 +52,7 @@ That's what happens when you automate PDF to Excel. You get your life back.
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/sS4T_U4iUjo" title="How To Automate PDF To Excel In 2 Minutes (No Code Required)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 12px; margin: 2rem 0;"></iframe>
 
-[Try Flowdrop](https://app.flowdrop.xyz/) and build your first workflow in the next 5 minutes.
+[Try Flowdrop](https://app.flowdrop.ai/) and build your first workflow in the next 5 minutes.
 
 ---
 
@@ -158,7 +158,7 @@ Your team member gets **19 hours back every week**. That's time they can spend o
 
 Plus, the data is cleaner. No typos from manual entry. No missed line items. No formatting issues. Just accurate data, every time.
 
-**Want to build this exact workflow?** [Get started with Flowdrop](https://app.flowdrop.xyz/) and get your first automation running today.
+**Want to build this exact workflow?** [Get started with Flowdrop](https://app.flowdrop.ai/) and get your first automation running today.
 
 ---
 
@@ -224,7 +224,7 @@ We built this because we were tired of automation tools that required a computer
 
 If you're tired of manually moving data from PDFs to Excel, here's what to do:
 
-**Step 1:** [Sign up for Flowdrop](https://app.flowdrop.xyz/)
+**Step 1:** [Sign up for Flowdrop](https://app.flowdrop.ai/)
 
 **Step 2:** Build your first PDF to Excel workflow using the steps above
 
@@ -246,7 +246,7 @@ Email responses. Data cleanup. Report creation. File organization. All that stuf
 
 That's when things get fun. When you realize you can get hours back every single week just by describing what you need and letting Flowdrop build it.
 
-**Ready to stop doing manual data entry?** [Try Flowdrop now](https://app.flowdrop.xyz/) and build your first workflow right now. Takes less time than processing one invoice manually.
+**Ready to stop doing manual data entry?** [Try Flowdrop now](https://app.flowdrop.ai/) and build your first workflow right now. Takes less time than processing one invoice manually.
 
 ---
 

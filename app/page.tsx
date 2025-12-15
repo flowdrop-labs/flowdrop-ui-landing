@@ -74,7 +74,7 @@ export default function LandingPage() {
                 className="relative"
               >
                 <LabeledScreenshot
-                  url="flowdrop.xyz/builder"
+                  url="flowdrop.ai/builder"
                   src="/screenshots/webfloweditor.png"
                   alt="Flowdrop Visual Workflow Builder - Drag and drop interface for creating AI-powered automation workflows"
                   width={800}
@@ -98,7 +98,7 @@ export default function LandingPage() {
                 className="relative"
               >
                 <LabeledScreenshot
-                  url="flowdrop.xyz/ai-generator"
+                  url="flowdrop.ai/ai-generator"
                   src="/screenshots/generatewebflowscreen.png"
                   alt="Flowdrop AI Workflow Generation - AI-powered interface for creating workflows through natural language descriptions"
                   width={800}
@@ -156,7 +156,7 @@ export default function LandingPage() {
             viewport={{ once: true, margin: "-50px" }}
             className="absolute bottom-32 right-8 z-30 hidden lg:block"
           >
-            <BrowserWindowFrame url="flowdrop.xyz/node-editor" className="rounded-lg">
+            <BrowserWindowFrame url="flowdrop.ai/node-editor" className="rounded-lg">
               <div className="relative">
                 <Image 
                   src="/screenshots/nodeeditor.png" 
@@ -180,7 +180,7 @@ export default function LandingPage() {
             viewport={{ once: true, margin: "-50px" }}
             className="absolute top-1/2 left-8 transform -translate-y-1/2 translate-y-[-200px] z-30 hidden lg:block"
           >
-            <BrowserWindowFrame url="flowdrop.xyz/build-with-chat" className="rounded-lg" headerVariant="compact">
+            <BrowserWindowFrame url="flowdrop.ai/build-with-chat" className="rounded-lg" headerVariant="compact">
               <div className="relative">
                 <Image 
                   src="/screenshots/buildwithchatfeature.png" 

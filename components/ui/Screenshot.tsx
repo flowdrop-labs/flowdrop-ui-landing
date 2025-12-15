@@ -49,7 +49,7 @@ export default function Screenshot({
               <div className="w-3 h-3 bg-green-500 rounded-full"></div>
             </div>
             <div className="flex-1 bg-neutral-700/50 rounded px-3 py-1 text-sm text-gray-400 text-center">
-              flowdrop.xyz
+              flowdrop.ai
             </div>
           </div>
           

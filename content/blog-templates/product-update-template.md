@@ -169,5 +169,5 @@ Ready to experience [Feature Name]?
 
 **Have questions about [Feature Name]?** [Contact our team](/contact) or explore the [documentation](/docs).
 
-**Want to learn more about Flowdrop?** [Check out our pricing](https://flowdrop.xyz/pricing) or [read more product updates](/blog/category/product-updates).
+**Want to learn more about Flowdrop?** [Check out our pricing](https://flowdrop.ai/pricing) or [read more product updates](/blog/category/product-updates).
 

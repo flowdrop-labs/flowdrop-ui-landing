@@ -334,21 +334,21 @@ export default function TermsOfService() {
             <section>
               <h2 className={cn(typography.h2, "mb-4")}>18. Notices</h2>
               <p className={cn(typography.body, "mb-4")}>
-                Notices to Flowdrop must be sent to <strong>Flowdrop, Inc., Attn: Legal, 7905 Hope Valley Ct, Adamstown, MD 21710, USA</strong> and to <strong><a href="mailto:legal@flowdrop.xyz" className="text-primary-main hover:text-primary-light transition-colors">legal@flowdrop.xyz</a></strong>. We may send notices to the email associated with your account or provide in‑product notices.
+                Notices to Flowdrop must be sent to <strong>Flowdrop, Inc., Attn: Legal, 7905 Hope Valley Ct, Adamstown, MD 21710, USA</strong> and to <strong><a href="mailto:contact@flowdrop.xyz" className="text-primary-main hover:text-primary-light transition-colors">contact@flowdrop.xyz</a></strong>. We may send notices to the email associated with your account or provide in‑product notices.
               </p>
             </section>
 
             <section>
               <h2 className={cn(typography.h2, "mb-4")}>19. Contact</h2>
               <p className={cn(typography.body)}>
-                Questions about these Terms? Contact <strong><a href="mailto:legal@flowdrop.xyz" className="text-primary-main hover:text-primary-light transition-colors">legal@flowdrop.xyz</a></strong>.
+                Questions about these Terms? Contact <strong><a href="mailto:contact@flowdrop.xyz" className="text-primary-main hover:text-primary-light transition-colors">contact@flowdrop.xyz</a></strong>.
               </p>
             </section>
 
             <section>
               <h2 className={cn(typography.h2, "mb-4")}>Exhibit A – Data Processing Addendum (Summary)</h2>
               <p className={cn(typography.body, "mb-4")}>
-                If you require a GDPR/CCPA Data Processing Addendum (DPA) for paid plans, contact us at <a href="mailto:legal@flowdrop.xyz" className="text-primary-main hover:text-primary-light transition-colors">legal@flowdrop.xyz</a>. Our standard DPA includes: (i) processing instructions limited to providing the Service; (ii) confidentiality, security, and sub‑processor terms; (iii) international transfer mechanisms (e.g., SCCs); and (iv) deletion/return of personal data upon termination.
+                If you require a GDPR/CCPA Data Processing Addendum (DPA) for paid plans, contact us at <a href="mailto:contact@flowdrop.xyz" className="text-primary-main hover:text-primary-light transition-colors">contact@flowdrop.xyz</a>. Our standard DPA includes: (i) processing instructions limited to providing the Service; (ii) confidentiality, security, and sub‑processor terms; (iii) international transfer mechanisms (e.g., SCCs); and (iv) deletion/return of personal data upon termination.
               </p>
             </section>
 

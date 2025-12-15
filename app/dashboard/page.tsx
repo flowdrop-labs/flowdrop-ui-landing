@@ -30,7 +30,7 @@ export default function Dashboard() {
     // Check if user is logged in
     supabase.auth.getUser().then(({ data: { user } }) => {
       if (!user) {
-        window.location.href = 'https://app.flowdrop.xyz/'
+        window.location.href = 'https://app.flowdrop.ai/'
       } else {
         setUser(user)
         setLoading(false)

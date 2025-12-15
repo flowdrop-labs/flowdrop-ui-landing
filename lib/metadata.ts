@@ -23,11 +23,11 @@ export function generateDocsMetadata(config: DocsMetadataConfig): Metadata {
     description,
     path,
     keywords = [],
-    image = 'https://flowdrop.xyz/website-preview.png',
+    image = 'https://flowdrop.ai/website-preview.png',
     type = 'website',
   } = config;
 
-  const url = `https://flowdrop.xyz${path}`;
+  const url = `https://flowdrop.ai${path}`;
   const fullTitle = title.includes('Flowdrop') ? title : `${title} | Flowdrop Docs`;
 
   return {
@@ -94,7 +94,7 @@ export function generateArticleSchema(config: {
     path,
     datePublished,
     dateModified,
-    image = 'https://flowdrop.xyz/website-preview.png',
+    image = 'https://flowdrop.ai/website-preview.png',
     keywords = [],
     wordCount,
     timeRequired,
@@ -109,7 +109,7 @@ export function generateArticleSchema(config: {
     author: {
       '@type': 'Organization',
       name: 'Flowdrop',
-      url: 'https://flowdrop.xyz',
+      url: 'https://flowdrop.ai',
     },
     publisher: {
       '@type': 'Organization',
@@ -123,7 +123,7 @@ export function generateArticleSchema(config: {
     dateModified: dateModified || new Date().toISOString().split('T')[0],
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://flowdrop.xyz${path}`,
+      '@id': `https://flowdrop.ai${path}`,
     },
     keywords: keywords.length > 0 ? keywords : undefined,
     articleSection: 'Documentation',
@@ -154,7 +154,7 @@ export function generateHowToSchema(config: {
     title,
     description,
     path,
-    image = 'https://flowdrop.xyz/website-preview.png',
+    image = 'https://flowdrop.ai/website-preview.png',
     estimatedCost,
     totalTime,
     steps = [],
@@ -177,7 +177,7 @@ export function generateHowToSchema(config: {
       position: index + 1,
       name: step.name,
       text: step.text,
-      url: step.url || `https://flowdrop.xyz${path}#step-${index + 1}`,
+      url: step.url || `https://flowdrop.ai${path}#step-${index + 1}`,
       image: step.image,
     })),
   };
@@ -194,7 +194,7 @@ export function generateBreadcrumbSchema(items: Array<{ name: string; path: stri
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: `https://flowdrop.xyz${item.path}`,
+      item: `https://flowdrop.ai${item.path}`,
     })),
   };
 }

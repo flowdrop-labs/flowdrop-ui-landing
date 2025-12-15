@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: 'Flowdrop Blog - AI Workflow Automation',
     description: 'Tutorials, guides, and tips for building AI workflows without code.',
     type: 'website',
-    url: 'https://flowdrop.xyz/blog',
+    url: 'https://flowdrop.ai/blog',
   },
   twitter: {
     card: 'summary_large_image',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/blog',
     types: {
-      'application/rss+xml': 'https://flowdrop.xyz/blog/rss.xml',
+      'application/rss+xml': 'https://flowdrop.ai/blog/rss.xml',
     },
   },
 };
@@ -46,13 +46,13 @@ export default function BlogPage() {
             '@type': 'Blog',
             name: 'Flowdrop Blog',
             description: 'AI workflow automation tips, tutorials, and guides for non-coders',
-            url: 'https://flowdrop.xyz/blog',
+            url: 'https://flowdrop.ai/blog',
             publisher: {
               '@type': 'Organization',
               name: 'Flowdrop',
               logo: {
                 '@type': 'ImageObject',
-                url: 'https://flowdrop.xyz/website-preview.png',
+                url: 'https://flowdrop.ai/website-preview.png',
               },
             },
           }),

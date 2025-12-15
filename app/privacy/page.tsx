@@ -57,8 +57,8 @@ export default function PrivacyPolicy() {
               <h2 className={cn(typography.h2, "mb-4")}>1. Who We Are</h2>
               <p className={cn(typography.body, "mb-4")}>
                 Flowdrop, Inc. ("Flowdrop," "we," "our," or "us") provides an AI‑powered visual workflow builder available at{' '}
-                <a href="https://flowdrop.xyz" className="text-primary-main hover:text-primary-light transition-colors">
-                  https://flowdrop.xyz
+                <a href="https://flowdrop.ai" className="text-primary-main hover:text-primary-light transition-colors">
+                  https://flowdrop.ai
                 </a>{' '}
                 (the "Service").
               </p>
@@ -236,8 +236,8 @@ export default function PrivacyPolicy() {
               <h2 className={cn(typography.h2, "mb-4")}>10. Your Rights</h2>
               <p className={cn(typography.body)}>
                 Depending on where you live, you may have rights to access, correct, delete, or restrict your personal information, object to processing, opt out of marketing, or export your data. Email{' '}
-                <a href="mailto:webb@flowdrop.xyz" className="text-primary-main hover:text-primary-light transition-colors">
-                  webb@flowdrop.xyz
+                <a href="mailto:contact@flowdrop.xyz" className="text-primary-main hover:text-primary-light transition-colors">
+                  contact@flowdrop.xyz
                 </a>{' '}
                 to exercise these rights. California residents may exercise CCPA rights; we do not sell personal information.
               </p>
@@ -271,8 +271,8 @@ export default function PrivacyPolicy() {
                 Attn: Flowdrop Team<br />
                 7905 Hope Valley Ct, Adamstown, MD, 21710, USA<br />
                 Email:{' '}
-                <a href="mailto:webb@flowdrop.xyz" className="text-primary-main hover:text-primary-light transition-colors">
-                  webb@flowdrop.xyz
+                <a href="mailto:contact@flowdrop.xyz" className="text-primary-main hover:text-primary-light transition-colors">
+                  contact@flowdrop.xyz
                 </a>
               </p>
             </section>

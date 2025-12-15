@@ -16,25 +16,25 @@ export default function AIWorkflowsExplained() {
     "@type": "Article",
     "headline": "What is a Workflow Builder? The Complete Guide to AI Automation in 2024",
     "description": "Discover how workflow builders are revolutionizing business automation, why AI-powered tools are dominating, and which use cases are driving the biggest ROI today.",
-    "image": "https://flowdrop.xyz/website-preview.png",
+    "image": "https://flowdrop.ai/website-preview.png",
     "author": {
       "@type": "Organization",
       "name": "Flowdrop",
-      "url": "https://flowdrop.xyz"
+      "url": "https://flowdrop.ai"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Flowdrop",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://flowdrop.xyz/website-preview.png"
+        "url": "https://flowdrop.ai/website-preview.png"
       }
     },
     "datePublished": "2024-12-01",
     "dateModified": "2024-12-01",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://flowdrop.xyz/docs/ai-workflows-explained"
+      "@id": "https://flowdrop.ai/docs/ai-workflows-explained"
     },
     "keywords": [
       "workflow builder",
@@ -57,19 +57,19 @@ export default function AIWorkflowsExplained() {
         "@type": "Thing",
         "name": "Workflow Builder",
         "description": "A visual tool that lets you create automated processes without writing code",
-        "url": "https://flowdrop.xyz/docs/ai-workflows-explained"
+        "url": "https://flowdrop.ai/docs/ai-workflows-explained"
       },
       {
         "@type": "Thing", 
         "name": "AI Automation",
         "description": "Automation powered by artificial intelligence that can understand context and make decisions",
-        "url": "https://flowdrop.xyz/docs/ai-workflows-explained"
+        "url": "https://flowdrop.ai/docs/ai-workflows-explained"
       },
       {
         "@type": "Thing",
         "name": "Business Automation",
         "description": "The use of technology to automate business processes and workflows",
-        "url": "https://flowdrop.xyz/docs/ai-workflows-explained"
+        "url": "https://flowdrop.ai/docs/ai-workflows-explained"
       }
     ],
     "mentions": [

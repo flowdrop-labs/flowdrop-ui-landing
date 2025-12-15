@@ -166,7 +166,7 @@ Your time is worth more than copying and pasting names into emails.
 
 <section-header text="Start Sending Smart Emails"></section-header>
 
-Ready to automate your list? [Talk to Flowdrop](https://app.flowdrop.xyz/) and build your workflow in minutes.
+Ready to automate your list? [Talk to Flowdrop](https://app.flowdrop.ai/) and build your workflow in minutes.
 
 Tell it what you want. Watch it build. Send those emails.
 

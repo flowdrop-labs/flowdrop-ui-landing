@@ -56,7 +56,7 @@ export const metadata = generateDocsMetadata(docsMetadata.pageName);
 #### ✅ SEO Best Practices Implemented
 
 1. **Canonical URLs** (Your original issue - FIXED ✅)
-   - Every page has `<link rel="canonical" href="https://flowdrop.xyz/..." />`
+   - Every page has `<link rel="canonical" href="https://flowdrop.ai/..." />`
    - Prevents duplicate content penalties
    - Critical for Google indexing
 
@@ -171,10 +171,10 @@ All layout files now use the shared system (3 lines each):
 ### 1. Verify Implementation (After Deploy)
 ```bash
 # Check canonical tags
-curl https://flowdrop.xyz/docs/getting-started | grep canonical
+curl https://flowdrop.ai/docs/getting-started | grep canonical
 
 # Should see:
-# <link rel="canonical" href="https://flowdrop.xyz/docs/getting-started"/>
+# <link rel="canonical" href="https://flowdrop.ai/docs/getting-started"/>
 ```
 
 ### 2. Submit to Google

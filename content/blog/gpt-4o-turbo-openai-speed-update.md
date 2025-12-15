@@ -194,7 +194,7 @@ Now that you've learned about GPT-4o Turbo, explore:
 
 <section-header text="Ready to Build?"></section-header>
 
-Want to take advantage of GPT-4o Turbo's speed in your workflows? [Sign up for Flowdrop](https://flowdrop.xyz/pricing) and start building AI workflows with the latest models—no credit card required.
+Want to take advantage of GPT-4o Turbo's speed in your workflows? [Sign up for Flowdrop](https://flowdrop.ai/pricing) and start building AI workflows with the latest models—no credit card required.
 
 Have questions about integrating GPT-4o Turbo? [Contact our team](/contact) or check out our [documentation](/docs).
 

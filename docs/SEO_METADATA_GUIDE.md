@@ -114,7 +114,7 @@ The `generateDocsMetadata()` function creates:
 - ✅ Keywords (optional)
 
 ### 2. Canonical URL
-- ✅ Full URL with `https://flowdrop.xyz` prefix
+- ✅ Full URL with `https://flowdrop.ai` prefix
 - ✅ Prevents duplicate content issues
 - ✅ Critical for Google indexing
 
@@ -330,15 +330,15 @@ export const docsMetadata = {
 
 ```bash
 # View source and search for "canonical"
-curl https://flowdrop.xyz/docs/getting-started | grep canonical
+curl https://flowdrop.ai/docs/getting-started | grep canonical
 
 # Should output:
-<link rel="canonical" href="https://flowdrop.xyz/docs/getting-started">
+<link rel="canonical" href="https://flowdrop.ai/docs/getting-started">
 ```
 
 ### Google Search Console
 
-1. Submit sitemap: `https://flowdrop.xyz/sitemap.xml`
+1. Submit sitemap: `https://flowdrop.ai/sitemap.xml`
 2. Request indexing for new pages
 3. Monitor coverage reports
 4. Check for duplicate canonicals
@@ -366,14 +366,14 @@ curl https://flowdrop.xyz/docs/getting-started | grep canonical
 
 ### Issue: OG image not loading
 
-**Solution**: Ensure `https://flowdrop.xyz/website-preview.png` is accessible. Can customize per page:
+**Solution**: Ensure `https://flowdrop.ai/website-preview.png` is accessible. Can customize per page:
 
 ```typescript
 myPage: {
   title: 'My Page',
   description: '...',
   path: '/docs/my-page',
-  image: 'https://flowdrop.xyz/my-custom-image.png',
+  image: 'https://flowdrop.ai/my-custom-image.png',
 }
 ```
 

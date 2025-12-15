@@ -156,20 +156,20 @@ When you use `generateDocsMetadata()`, you automatically get:
 <meta name="keywords" content="custom integrations, API integration, ..." />
 
 <!-- Canonical URL (critical for SEO!) -->
-<link rel="canonical" href="https://flowdrop.xyz/docs/advanced-integrations" />
+<link rel="canonical" href="https://flowdrop.ai/docs/advanced-integrations" />
 
 <!-- Open Graph (Facebook, LinkedIn) -->
 <meta property="og:title" content="Advanced Integrations Guide" />
 <meta property="og:description" content="Learn how to build..." />
-<meta property="og:url" content="https://flowdrop.xyz/docs/advanced-integrations" />
-<meta property="og:image" content="https://flowdrop.xyz/website-preview.png" />
+<meta property="og:url" content="https://flowdrop.ai/docs/advanced-integrations" />
+<meta property="og:image" content="https://flowdrop.ai/website-preview.png" />
 <meta property="og:type" content="website" />
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Advanced Integrations Guide" />
 <meta name="twitter:description" content="Learn how to build..." />
-<meta name="twitter:image" content="https://flowdrop.xyz/website-preview.png" />
+<meta name="twitter:image" content="https://flowdrop.ai/website-preview.png" />
 
 <!-- Robots Directives -->
 <meta name="robots" content="index, follow" />

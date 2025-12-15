@@ -121,7 +121,7 @@ flowdrop/
 │                      REQUEST LIFECYCLE                          │
 └─────────────────────────────────────────────────────────────────┘
 
-1. User visits: https://flowdrop.xyz/docs/getting-started
+1. User visits: https://flowdrop.ai/docs/getting-started
                               ↓
 2. Next.js loads: app/docs/getting-started/layout.tsx
                               ↓
@@ -133,7 +133,7 @@ flowdrop/
                               ↓
 6. generateDocsMetadata() creates:
    ├── Basic meta tags (title, description, keywords)
-   ├── Canonical URL (https://flowdrop.xyz/docs/getting-started)
+   ├── Canonical URL (https://flowdrop.ai/docs/getting-started)
    ├── Open Graph tags (og:title, og:description, og:image, etc.)
    ├── Twitter Cards (twitter:card, twitter:title, etc.)
    └── Robots directives (index, follow, max-preview, etc.)
@@ -141,7 +141,7 @@ flowdrop/
 7. Next.js injects into <head>:
    <title>Getting Started with Flowdrop | Flowdrop Docs</title>
    <meta name="description" content="..." />
-   <link rel="canonical" href="https://flowdrop.xyz/docs/getting-started" />
+   <link rel="canonical" href="https://flowdrop.ai/docs/getting-started" />
    <meta property="og:title" content="..." />
    <meta property="og:url" content="..." />
    ... (20+ meta tags auto-generated)
@@ -178,7 +178,7 @@ flowdrop/
 │      openGraph: { ... },                              │
 │      twitter: { ... },                                │
 │      alternates: {                                    │
-│        canonical: `https://flowdrop.xyz${config.path}`│
+│        canonical: `https://flowdrop.ai${config.path}`│
 │      },                                               │
 │      robots: { ... },                                 │
 │    };                                                 │
@@ -281,14 +281,14 @@ For each page, `generateDocsMetadata()` automatically creates:
 <meta name="keywords" content="..." />
 
 <!-- ✅ Canonical URL (1) - Your original issue! -->
-<link rel="canonical" href="https://flowdrop.xyz/docs/..." />
+<link rel="canonical" href="https://flowdrop.ai/docs/..." />
 
 <!-- ✅ Open Graph Tags (7) - Social media previews -->
 <meta property="og:title" content="..." />
 <meta property="og:description" content="..." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://flowdrop.xyz/docs/..." />
-<meta property="og:image" content="https://flowdrop.xyz/website-preview.png" />
+<meta property="og:url" content="https://flowdrop.ai/docs/..." />
+<meta property="og:image" content="https://flowdrop.ai/website-preview.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:site_name" content="Flowdrop" />

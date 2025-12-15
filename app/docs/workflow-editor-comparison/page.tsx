@@ -24,23 +24,23 @@ export default function WorkflowEditorComparison() {
               "name": "AI Workflow Builder Comparison 2025 | Flowdrop",
               "headline": "AI Workflow Builders in 2025: Zapier vs Make vs n8n vs Gumloop vs Flowise vs Lindy vs Relevance AI — and where Flowdrop fits",
               "description": "If you're Googling best AI workflow builder, Zapier alternative, or low-code automation tool for startups, you want a side-by-side snapshot that's current, metric-driven, and actually helps you choose. Below you'll find hard numbers on pricing, integration depth, AI-native features, and the strategic whitespace Flowdrop is built to own.",
-              "url": "https://flowdrop.xyz/docs/workflow-editor-comparison",
+              "url": "https://flowdrop.ai/docs/workflow-editor-comparison",
               "inLanguage": "en",
               "datePublished": "2024-06-01",
               "dateModified": "2024-06-01",
               "publisher": {
                 "@type": "Organization",
                 "name": "Flowdrop",
-                "url": "https://flowdrop.xyz",
+                "url": "https://flowdrop.ai",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://flowdrop.xyz/website-preview.png"
+                  "url": "https://flowdrop.ai/website-preview.png"
                 },
                 "contactPoint": {
                   "@type": "ContactPoint",
                   "contactType": "customer support",
-                  "email": "support@flowdrop.xyz",
-                  "url": "https://flowdrop.xyz/contact"
+                  "email": "support@flowdrop.ai",
+                  "url": "https://flowdrop.ai/contact"
                 },
                 "address": {
                   "@type": "PostalAddress",
@@ -254,7 +254,7 @@ export default function WorkflowEditorComparison() {
           <Button
             variant="primary"
             className="h-[52px] w-full max-w-[400px] px-8 btn-liquid text-white font-semibold rounded-full shadow-lg shadow-primary-main/25 ring-2 ring-primary-main/20 group relative overflow-hidden"
-            onClick={() => window.location.href = 'https://app.flowdrop.xyz/'}
+            onClick={() => window.location.href = 'https://app.flowdrop.ai/'}
             whileHover="hover"
             initial="default"
             animate="default"

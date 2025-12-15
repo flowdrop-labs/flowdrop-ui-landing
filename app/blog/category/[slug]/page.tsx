@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
 
   const title = `${category.name} Articles - Flowdrop Blog`;
   const description = `Browse ${category.count} articles about ${category.name.toLowerCase()}. Learn tips, tutorials, and best practices for AI workflow automation.`;
-  const url = `https://flowdrop.xyz/blog/category/${category.slug}`;
+  const url = `https://flowdrop.ai/blog/category/${category.slug}`;
 
   return {
     title,
@@ -78,11 +78,11 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             '@type': 'CollectionPage',
             name: `${category.name} Articles`,
             description: `Articles about ${category.name.toLowerCase()} on Flowdrop Blog`,
-            url: `https://flowdrop.xyz/blog/category/${category.slug}`,
+            url: `https://flowdrop.ai/blog/category/${category.slug}`,
             isPartOf: {
               '@type': 'Blog',
               name: 'Flowdrop Blog',
-              url: 'https://flowdrop.xyz/blog',
+              url: 'https://flowdrop.ai/blog',
             },
           }),
         }}

@@ -43,11 +43,11 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     };
   }
 
-  const url = `https://flowdrop.xyz/blog/${post.slug}`;
+  const url = `https://flowdrop.ai/blog/${post.slug}`;
   // Ensure ogImage is an absolute URL for social media previews
   const ogImage = post.ogImage 
-    ? (post.ogImage.startsWith('http') ? post.ogImage : `https://flowdrop.xyz${post.ogImage}`)
-    : 'https://flowdrop.xyz/website-preview.png';
+    ? (post.ogImage.startsWith('http') ? post.ogImage : `https://flowdrop.ai${post.ogImage}`)
+    : 'https://flowdrop.ai/website-preview.png';
 
   return {
     title: `${post.title} | Flowdrop Blog`,
@@ -96,7 +96,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const htmlContent = await markdownToHtml(post.content);
   const toc = extractTableOfContents(post.content);
   const relatedPosts = getRelatedPosts(post, 3);
-  const url = `https://flowdrop.xyz/blog/${post.slug}`;
+  const url = `https://flowdrop.ai/blog/${post.slug}`;
 
   // Generate JSON-LD structured data
   const blogPostingSchema = {
@@ -105,8 +105,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     headline: post.title,
     description: post.description,
     image: post.ogImage 
-      ? (post.ogImage.startsWith('http') ? post.ogImage : `https://flowdrop.xyz${post.ogImage}`)
-      : 'https://flowdrop.xyz/website-preview.png',
+      ? (post.ogImage.startsWith('http') ? post.ogImage : `https://flowdrop.ai${post.ogImage}`)
+      : 'https://flowdrop.ai/website-preview.png',
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
     author: {
@@ -119,7 +119,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       name: 'Flowdrop',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://flowdrop.xyz/website-preview.png',
+        url: 'https://flowdrop.ai/website-preview.png',
       },
     },
     mainEntityOfPage: {
@@ -136,19 +136,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://flowdrop.xyz',
+        item: 'https://flowdrop.ai',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Blog',
-        item: 'https://flowdrop.xyz/blog',
+        item: 'https://flowdrop.ai/blog',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: post.category,
-        item: `https://flowdrop.xyz/blog/category/${generateSlug(post.category)}`,
+        item: `https://flowdrop.ai/blog/category/${generateSlug(post.category)}`,
       },
       {
         '@type': 'ListItem',

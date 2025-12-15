@@ -13,7 +13,7 @@ const steps = [
     description: "Create your Flowdrop account and access the dashboard",
     icon: Users,
     details: [
-      "Visit flowdrop.xyz and click 'Get Started'",
+      "Visit flowdrop.ai and click 'Get Started'",
       "Sign up with Google or email",
       "Verify your email address",
       "Access your personal workspace"

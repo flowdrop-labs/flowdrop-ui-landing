@@ -17,25 +17,25 @@ export default function WorkflowBuilderBasics() {
     "@type": "Article",
     "headline": "Workflow Builder Basics: Complete Guide to Building Your First AI Workflow in 2024",
     "description": "Master the fundamentals of visual workflow building with this comprehensive guide. Learn how to create, test, and deploy automated workflows using drag-and-drop nodes, triggers, and actions.",
-    "image": "https://flowdrop.xyz/website-preview.png",
+    "image": "https://flowdrop.ai/website-preview.png",
     "author": {
       "@type": "Organization",
       "name": "Flowdrop",
-      "url": "https://flowdrop.xyz"
+      "url": "https://flowdrop.ai"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Flowdrop",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://flowdrop.xyz/website-preview.png"
+        "url": "https://flowdrop.ai/website-preview.png"
       }
     },
     "datePublished": "2024-12-01",
     "dateModified": "2024-12-01",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://flowdrop.xyz/docs/workflow-builder-basics"
+      "@id": "https://flowdrop.ai/docs/workflow-builder-basics"
     },
     "keywords": [
       "workflow builder tutorial",
@@ -58,19 +58,19 @@ export default function WorkflowBuilderBasics() {
         "@type": "Thing",
         "name": "Visual Workflow Builder",
         "description": "A drag-and-drop interface for creating automated workflows without code",
-        "url": "https://flowdrop.xyz/docs/workflow-builder-basics"
+        "url": "https://flowdrop.ai/docs/workflow-builder-basics"
       },
       {
         "@type": "Thing", 
         "name": "Workflow Nodes",
         "description": "Individual building blocks that perform specific actions in an automated workflow",
-        "url": "https://flowdrop.xyz/docs/workflow-builder-basics"
+        "url": "https://flowdrop.ai/docs/workflow-builder-basics"
       },
       {
         "@type": "Thing",
         "name": "Workflow Testing",
         "description": "The process of validating and debugging automated workflows before deployment",
-        "url": "https://flowdrop.xyz/docs/workflow-builder-basics"
+        "url": "https://flowdrop.ai/docs/workflow-builder-basics"
       }
     ],
     "mainEntity": {

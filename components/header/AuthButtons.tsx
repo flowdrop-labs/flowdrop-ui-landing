@@ -62,7 +62,7 @@ export default function AuthButtons({ user, loading, onSignOut, className = "" }
          <Button
            variant="ghost"
            size="sm"
-           onClick={() => window.location.href = 'https://app.flowdrop.xyz/'}
+           onClick={() => window.location.href = 'https://app.flowdrop.ai/'}
            className="backdrop-blur-sm group relative overflow-hidden px-3 btn-liquid-hover hover:text-white border border-transparent"
            onHoverStart={() => setIsLoginHovered(true)}
            onHoverEnd={() => setIsLoginHovered(false)}

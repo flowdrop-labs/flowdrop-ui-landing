@@ -29,7 +29,7 @@ export function BlogCTA({
         {/* Get Started Button - Primary */}
         <motion.button
           onClick={() => {
-            window.location.href = 'https://app.flowdrop.xyz/';
+            window.location.href = 'https://app.flowdrop.ai/';
           }}
           className="h-[56px] w-full px-8 text-white font-semibold rounded-full shadow-lg shadow-primary-main/25 ring-2 ring-primary-main/20 group relative overflow-hidden btn-liquid"
           whileHover={{ scale: 1.02 }}

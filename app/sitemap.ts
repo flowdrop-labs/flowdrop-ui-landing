@@ -3,7 +3,7 @@ import { docsMetadata } from '@/lib/docs-metadata-config';
 import { getAllPostSlugs } from '@/lib/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://flowdrop.xyz';
+  const baseUrl = 'https://flowdrop.ai';
   
   // Main site pages
   const routes: MetadataRoute.Sitemap = [

@@ -7,7 +7,7 @@ Disallow: /auth
 Disallow: /dashboard
 
 # Host
-Host: https://flowdrop.xyz
+Host: https://flowdrop.ai
 
 # Sitemaps
-Sitemap: https://flowdrop.xyz/sitemap.xml
+Sitemap: https://flowdrop.ai/sitemap.xml

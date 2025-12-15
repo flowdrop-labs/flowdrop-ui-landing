@@ -144,7 +144,7 @@ Summarize what readers learned and encourage them to take action.
 
 Include a clear call-to-action:
 
-Ready to [accomplish the goal]? [Try Flowdrop free](https://flowdrop.xyz/pricing) and start [doing the thing] in minutes.
+Ready to [accomplish the goal]? [Try Flowdrop free](https://flowdrop.ai/pricing) and start [doing the thing] in minutes.
 
 Have questions? [Contact us](/contact) or explore our [documentation](/docs).
 

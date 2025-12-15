@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: TagPageProps): Promise<Metada
 
   const title = `${tag.name} Articles - Flowdrop Blog`;
   const description = `Browse ${tag.count} articles tagged with ${tag.name.toLowerCase()}. Discover tips, tutorials, and guides for AI workflow automation.`;
-  const url = `https://flowdrop.xyz/blog/tag/${tag.slug}`;
+  const url = `https://flowdrop.ai/blog/tag/${tag.slug}`;
 
   return {
     title,
@@ -81,11 +81,11 @@ export default async function TagPage({ params }: TagPageProps) {
             '@type': 'CollectionPage',
             name: `Articles Tagged: ${tag.name}`,
             description: `Articles tagged with ${tag.name.toLowerCase()} on Flowdrop Blog`,
-            url: `https://flowdrop.xyz/blog/tag/${tag.slug}`,
+            url: `https://flowdrop.ai/blog/tag/${tag.slug}`,
             isPartOf: {
               '@type': 'Blog',
               name: 'Flowdrop Blog',
-              url: 'https://flowdrop.xyz/blog',
+              url: 'https://flowdrop.ai/blog',
             },
           }),
         }}

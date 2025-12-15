@@ -43,7 +43,7 @@ Before we dive into the tutorial, here's why AI workflows are game-changing for 
 
 Before starting, you'll need:
 
-1. A Flowdrop account (sign up at [flowdrop.xyz](https://flowdrop.xyz))
+1. A Flowdrop account (sign up at [flowdrop.ai](https://flowdrop.ai))
 2. 5 minutes of your time
 3. An idea of what you want to automate
 
@@ -179,7 +179,7 @@ Now that you've built your first workflow, explore:
 
 <section-header text="Get Started Today"></section-header>
 
-Ready to build your first AI workflow? [Sign up for Flowdrop](https://flowdrop.xyz/pricing) and start automating in minutes—no credit card required.
+Ready to build your first AI workflow? [Sign up for Flowdrop](https://flowdrop.ai/pricing) and start automating in minutes—no credit card required.
 
 Have questions? [Contact our team](/contact) or check out our [documentation](/docs) for detailed guides.
 

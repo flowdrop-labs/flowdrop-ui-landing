@@ -72,7 +72,7 @@ Done. It builds that for you.
 
 **Pricing**: Starts at $9/month
 
-**Try it**: [Flowdrop.xyz](https://flowdrop.xyz)
+**Try it**: [Flowdrop.ai](https://flowdrop.ai)
 
 ---
 
@@ -204,7 +204,7 @@ No nodes. No mapping. No "why isn't this working" moments.
 
 Your Google Sheet is ready to do more. Pick a tool and get started:
 
-**Want the easy way?** → [Try Flowdrop](https://app.flowdrop.xyz/)  
+**Want the easy way?** → [Try Flowdrop](https://app.flowdrop.ai/)  
 **Want to build it yourself?** → Check out Zapier or Make
 
 Stop doing manual work. Let your sheet handle it.

@@ -56,7 +56,7 @@ export const comparisonItems: ComparisonItem[] = [
 export const hero: HeroContent = {
   headline: "Automation shouldn't feel like another job.",
   subcopy: 'What if it felt... <em class="text-primary-main font-medium">effortless?</em>',
-  ctaHref: 'https://app.flowdrop.xyz/',
+  ctaHref: 'https://app.flowdrop.ai/',
   ctaText: 'Get Started',
 };
 
@@ -65,7 +65,7 @@ export const mobileStories: MobileStory[] = [
     title: 'Visual Workflow Builder',
     copy: 'Drag, drop, and connect. Build complex workflows with intuitive visual tools.',
     screenshot: {
-      url: 'flowdrop.xyz/builder',
+      url: 'flowdrop.ai/builder',
       src: '/screenshots/webfloweditor.png',
       alt: 'Flowdrop Visual Workflow Builder',
       width: 400,
@@ -77,7 +77,7 @@ export const mobileStories: MobileStory[] = [
     title: 'AI-Powered Generation',
     copy: 'Describe your workflow in plain English. Watch AI create it instantly.',
     screenshot: {
-      url: 'flowdrop.xyz/ai-generator',
+      url: 'flowdrop.ai/ai-generator',
       src: '/screenshots/generatewebflowscreen.png',
       alt: 'Flowdrop AI Workflow Generation',
       width: 400,
@@ -89,7 +89,7 @@ export const mobileStories: MobileStory[] = [
     title: 'Build with Chat',
     copy: 'Natural conversations that create powerful workflows. Like Cursor, but for automation.',
     screenshot: {
-      url: 'flowdrop.xyz/build-with-chat',
+      url: 'flowdrop.ai/build-with-chat',
       src: '/screenshots/buildwithchatfeature.png',
       alt: 'Flowdrop Build with Chat',
       width: 250,
@@ -101,7 +101,7 @@ export const mobileStories: MobileStory[] = [
     title: 'Advanced AI Node Editing',
     copy: 'Fine-tune AI nodes with precision. Custom logic for complex workflows.',
     screenshot: {
-      url: 'flowdrop.xyz/node-editor',
+      url: 'flowdrop.ai/node-editor',
       src: '/screenshots/nodeeditor.png',
       alt: 'Flowdrop Node Editor',
       width: 400,
@@ -113,7 +113,7 @@ export const mobileStories: MobileStory[] = [
     title: 'Advanced AI-Powered Nodes',
     copy: 'Cutting-edge AI nodes with advanced capabilities. Build sophisticated workflows with powerful AI tools.',
     screenshot: {
-      url: 'flowdrop.xyz/advanced-editor',
+      url: 'flowdrop.ai/advanced-editor',
       src: '/screenshots/webfloweditor2.png',
       alt: 'Flowdrop Advanced AI-Powered Nodes',
       width: 400,

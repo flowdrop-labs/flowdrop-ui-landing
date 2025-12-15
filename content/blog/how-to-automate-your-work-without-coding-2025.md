@@ -101,7 +101,7 @@ Done. That's it.
 
 No boxes. No lines. No videos to watch. Just normal words.
 
-This is what we built at [Flowdrop](https://app.flowdrop.xyz/). You chat with it like texting a friend, and it builds your automation for you.
+This is what we built at [Flowdrop](https://app.flowdrop.ai/). You chat with it like texting a friend, and it builds your automation for you.
 
 ### How It Actually Works
 
@@ -238,7 +238,7 @@ Most people save 5 to 10 hours per month. That's $125 to $250 in time value. For
 
 ### "I'm not tech smart enough."
 
-That's the whole point of new tools like [Flowdrop](https://app.flowdrop.xyz/). You don't need to be tech smart anymore.
+That's the whole point of new tools like [Flowdrop](https://app.flowdrop.ai/). You don't need to be tech smart anymore.
 
 If you can describe what you want in a sentence, you can automate it. That's the standard now.
 
@@ -310,7 +310,7 @@ At Flowdrop, we're making automation simple for everyone. No coding. No tech jun
 
 Most people save 2-3 hours in their first week. That's $50-$75 worth of time back immediately.
 
-Want to see how it works? [Start your first automation today](https://app.flowdrop.xyz/) and get your time back.
+Want to see how it works? [Start your first automation today](https://app.flowdrop.ai/) and get your time back.
 
 ---
 
@@ -462,7 +462,7 @@ That's the goal. Not just efficiency. Peace of mind.
 
 The best time to start automating was last year. The second best time is today.
 
-Right now, [open Flowdrop](https://app.flowdrop.xyz/), describe one annoying task, and automate it. See how fast it is. See how much time you save.
+Right now, [open Flowdrop](https://app.flowdrop.ai/), describe one annoying task, and automate it. See how fast it is. See how much time you save.
 
 Then automate the next thing. And the next.
 

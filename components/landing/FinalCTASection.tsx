@@ -19,7 +19,7 @@ export default function FinalCTASection({
   title = 'Ready to get started?',
   subtitle = "We're live. Build and ship automations in minutes.",
   ctaText = 'Start Building',
-  ctaHref = 'https://app.flowdrop.xyz/',
+  ctaHref = 'https://app.flowdrop.ai/',
   eventName = 'Get Started',
   eventContext = 'email-section'
 }: FinalCTASectionProps) {

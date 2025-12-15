@@ -43,7 +43,7 @@ export async function POST(req: NextRequest, ctx: any) {
     // Send notification email to admin
     const adminEmail = await resend.emails.send({
       from: 'Flowdrop Contact Form <noreply@flowdrop.xyz>',
-      to: ['webb@flowdrop.xyz'],
+      to: ['contact@flowdrop.xyz'],
       subject: `New Contact Form Submission: ${subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

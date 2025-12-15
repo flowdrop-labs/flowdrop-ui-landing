@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
   const posts = getAllPosts();
-  const siteUrl = 'https://flowdrop.xyz';
+  const siteUrl = 'https://flowdrop.ai';
   const buildDate = new Date().toUTCString();
 
   const rss = `<?xml version="1.0" encoding="UTF-8"?>
