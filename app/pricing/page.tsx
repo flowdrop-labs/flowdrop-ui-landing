@@ -50,7 +50,7 @@ export default function PricingPage() {
     },
     {
       name: 'Builder',
-      price: '$49',
+      price: '$9',
       period: '/mo',
       description: 'For growing teams',
       priceId: 'price_builder_monthly',
@@ -58,16 +58,21 @@ export default function PricingPage() {
       icon: Rocket,
       features: [
         '5,000 credits/month',
-        '3 seats included',
+        '3 team seats',
         'Premium model access',
         'Enables model selectors'
       ],
-      cta: 'Get Started',
-      ctaAction: () => window.location.href = 'https://app.flowdrop.ai/settings?page=billing'
+      cta: 'Claim Offer',
+      ctaAction: () => window.location.href = 'https://app.flowdrop.ai/settings?page=billing',
+      discount: {
+        originalPrice: '$49',
+        discountAmount: '$40 OFF',
+        savingsText: 'Save $80 - 2 months'
+      }
     },
     {
       name: 'Growth',
-      price: '$99',
+      price: '$59',
       period: '/mo',
       description: 'For high-volume operations',
       priceId: 'price_growth_monthly',
@@ -75,14 +80,19 @@ export default function PricingPage() {
       icon: Crown,
       features: [
         '10,000 credits/month',
-        '5 seats included',
+        '10 team seats',
         'Premium model access',
         'Enables model selectors',
-        'Custom integration',
-        'Dedicated support'
+        'Dedicated support',
+        'Custom node integrations'
       ],
-      cta: 'Get Started',
-      ctaAction: () => window.location.href = 'https://app.flowdrop.ai/settings?page=billing'
+      cta: 'Claim Offer',
+      ctaAction: () => window.location.href = 'https://app.flowdrop.ai/settings?page=billing',
+      discount: {
+        originalPrice: '$99',
+        discountAmount: '$40 OFF',
+        savingsText: 'Save $80 - 2 months'
+      }
     },
     {
       name: 'Enterprise',
@@ -235,6 +245,7 @@ export default function PricingPage() {
                     loading={!!plan.priceId && loadingId === plan.priceId}
                     disabled={!!plan.priceId && loadingId === plan.priceId}
                     prevPlanName={index > 0 ? plans[index-1].name : undefined}
+                    discount={plan.discount}
                   />
                 </motion.div>
               );
