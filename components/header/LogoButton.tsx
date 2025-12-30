@@ -101,6 +101,7 @@ export default function LogoButton({ className = "", isHeroVersion = false }: Lo
               width={23} 
               height={23} 
               className="w-6 h-6"
+              priority={isHeroVersion}
             />
             </div>
           </motion.div>
