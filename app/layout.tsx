@@ -24,17 +24,20 @@ export const metadata: Metadata = {
   description: "Flowdrop is a no-code, AI-powered workflow builder that deploys production automations in under five minutes.",
   icons: {
     icon: [
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon.ico', sizes: 'any' }
+      // Google requires minimum 48x48px - using 96x96px (perfect for search results)
+      { url: '/favicon/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      // Fallback to SVG for modern browsers
+      { url: '/favicon/favicon.svg', type: 'image/svg+xml' },
+      // Legacy browser support
+      { url: '/favicon/favicon.ico', sizes: 'any' }
     ],
-    shortcut: '/favicon.ico',
+    shortcut: '/favicon/favicon.ico',
     apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
+      { url: '/favicon/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
     ],
     other: [
-      { rel: 'icon', url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
-      { rel: 'icon', url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' }
+      { rel: 'icon', url: '/favicon/web-app-manifest-192x192.png', sizes: '192x192', type: 'image/png' },
+      { rel: 'icon', url: '/favicon/web-app-manifest-512x512.png', sizes: '512x512', type: 'image/png' }
     ]
   },
   keywords: [
@@ -119,6 +122,12 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        {/* Favicon links - 96x96px meets Google's requirements */}
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+        <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
