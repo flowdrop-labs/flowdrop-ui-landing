@@ -30,7 +30,7 @@ export default function ContactPage() {
         body: JSON.stringify(formData),
       });
 
-      const data = await res.json<LooseObject>();
+      const data = await res.json();
 
       if (res.ok && data.success) {
         setIsSubmitted(true);
