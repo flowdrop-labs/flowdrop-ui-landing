@@ -39,7 +39,7 @@ export default function AdminPage() {
   const fetchCount = async () => {
     try {
       const response = await fetch('/api/subscriberList');
-      const data = await response.json<LooseObject>();
+      const data = await response.json();
       if (data.success) {
         setTotalCount(data.count);
       }
