@@ -42,7 +42,11 @@ export const metadata: Metadata = {
   },
   keywords: [
     "AI workflow builder",
-    "no-code automation", 
+    "no-code automation",
+    "ai agents",
+    "agentic ai",
+    "agentic tools",
+    "build your own ai agent", 
     "workflow automation",
     "AI automation",
     "business automation",
@@ -50,7 +54,8 @@ export const metadata: Metadata = {
     "automation platform",
     "AI workflows",
     "no-code platform",
-    "business process automation"
+    "business process automation",
+    "productivity tools"
   ],
   authors: [{ name: "Flowdrop Team" }],
   creator: "Flowdrop",
