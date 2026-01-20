@@ -54,8 +54,8 @@ export const comparisonItems: ComparisonItem[] = [
 ];
 
 export const hero: HeroContent = {
-  headline: "Clone yourself. Build AI agents that work while you sleep.",
-  subcopy: 'What if it felt... <em class="text-primary-main font-medium">effortless?</em>',
+  headline: "Ever wish you could hire another you? Now you can.",
+  subcopy: 'Clone yourself. Build AI agents that work while you sleep.',
   ctaHref: 'https://app.flowdrop.ai/',
   ctaText: 'Get Started',
 };
