@@ -12,7 +12,6 @@ import FinalCTASection from '@/components/landing/FinalCTASection';
 import WhySection from '@/components/landing/WhySection';
 const VideoSection = dynamic(() => import('@/components/landing/VideoSection'), { ssr: false });
 const AudienceSection = dynamic(() => import('@/components/landing/AudienceSection'), { ssr: false });
-const ComparisonSection = dynamic(() => import('@/components/landing/ComparisonSection'), { ssr: false });
 const TestimonialsSection = dynamic(() => import('@/components/landing/TestimonialsSection'), { ssr: false });
 const CompanyLogosSection = dynamic(() => import('@/components/landing/CompanyLogosSection'), { ssr: false });
 import HeroSection from '@/components/landing/HeroSection';
@@ -38,15 +37,15 @@ export default function LandingPage() {
       {/* Hero Section */}
       <HeroSection />
 
+      {/* Why Flowdrop Section */}
+      <WhySection />
+
       {/* Video Section */}
       <VideoSection 
         videoId="xB7Y4vgSXlo"
         title="See Flowdrop in Action"
         subtitle="Watch how easy it is to build powerful automations"
       />
-
-      {/* Why Flowdrop Section */}
-      <WhySection />
 
       {/* Your Edge With Flowdrop - Clean Real Screenshots Section */}
       <section className="py-12 lg:py-20 relative z-10 overflow-hidden">
@@ -234,8 +233,6 @@ export default function LandingPage() {
 
 
       <AudienceSection />
-
-      <ComparisonSection />
 
       <TestimonialsSection />
 

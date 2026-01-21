@@ -8,7 +8,7 @@ import { testimonials } from '@/content/landing.config';
 export default function TestimonialsSection() {
   return (
     <Section borderedTop>
-      <AnimatedSection className="max-w-4xl mx-auto">
+      <AnimatedSection className="max-w-7xl mx-auto">
           <SectionHeader
             title="What Our Users Say"
             subtitle="Real feedback from builders who are already cranking with Flowdrop"
@@ -17,7 +17,7 @@ export default function TestimonialsSection() {
             className="max-w-4xl mx-auto"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-4 gap-6">
             {testimonials.map((t, idx) => (
               <motion.div
                 key={idx}

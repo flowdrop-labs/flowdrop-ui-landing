@@ -29,6 +29,7 @@ export const testimonials: Testimonial[] = [
   { initials: 'HT', name: 'Hugh Tang', role: 'SaaS Founder', quote: 'Love the minimalist design.' },
   { initials: 'W', name: 'Will', role: 'Agency Founder', quote: 'Saw your LinkedIn post and thought it looked great.' },
   { initials: 'K', name: 'Kmark', role: 'Community Moderator & JavaScript Dev', quote: 'i gotta say sir. i love the UI' },
+  { initials: 'A', name: 'Alex', role: 'Founder of TradeJournal', quote: 'thanks you so much for your time and the effort you put for your customers 😀 🥰' },
 ];
 
 export const comparisonItems: ComparisonItem[] = [
