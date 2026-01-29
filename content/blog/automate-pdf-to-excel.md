@@ -10,7 +10,7 @@ authorImage: "/assets/logo.png"
 category: "How-To Guides"
 tags: ["pdf-to-excel", "automation", "data-entry", "invoice-processing", "no-code", "productivity"]
 featured: true
-ogImage: "/blog/automate-pdf-to-excel/og-image.jpg"
+ogImage: "/blog/automate-pdf-to-excel/op-image.jpg"
 faqSchema:
   - question: "Does PDF to Excel automation work with messy PDFs?"
     answer: "Yes, Flowdrop handles most PDF formats including scanned documents, forms, invoices, receipts, and reports. The AI figures out the data structure and organizes it correctly, even when layouts are inconsistent."
