@@ -10,7 +10,7 @@ authorImage: "/assets/logo.png"
 category: "How-To Guides"
 tags: ["how-to", "product-design", "productivity", "conversational-ui", "automation"]
 featured: false
-ogImage: "/blog/conversational-interfaces-beat-traditional-uis/og-image.jpg"
+ogImage: "/blog/conversational-interfaces-beat-traditional-uis/op-image.jpeg"
 faqSchema:
   - question: "Do I need coding skills to use conversational interfaces?"
     answer: "No. If you can text or chat, you're good. Flowdrop lets you describe what you want in plain English and builds the automation for you."

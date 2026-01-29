@@ -10,7 +10,7 @@ authorImage: "/assets/logo.png"
 category: "Tutorials"
 tags: ["automation", "tutorial", "ai-agents", "ai-automation"]
 featured: true
-ogImage: "/blog/ai-agents-replacing-manual-workflows-2026/og-image.jpg"
+ogImage: "/blog/ai-agents-replacing-manual-workflows-2026/op-image.jpeg"
 faqSchema:
   - question: "How do AI agents automate repetitive work?"
     answer: "AI agents understand your goal in plain language, connect to your apps with a few clicks, and run workflows automatically—no code or API keys required. You describe what you want; the agent builds and runs it."
