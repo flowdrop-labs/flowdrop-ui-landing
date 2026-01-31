@@ -11,6 +11,28 @@ import { BlogPost, BlogPostMetadata, TableOfContentsItem } from '@/types/blog';
 import { generateSlug, calculateReadingTime } from './blog-utils';
 
 const postsDirectory = path.join(process.cwd(), 'content/blog');
+const publicDirectory = path.join(process.cwd(), 'public');
+
+/**
+ * Resolve ogImage to an existing file, accepting either .jpg or .jpeg.
+ * If the path in frontmatter ends with .jpg or .jpeg, checks for that file first,
+ * then tries the other extension. Returns the URL path that exists, or the original.
+ */
+function resolveOgImage(ogImage: string | undefined): string | undefined {
+  if (!ogImage) return undefined;
+  if (ogImage.startsWith('http')) return ogImage;
+
+  const normalized = ogImage.startsWith('/') ? ogImage.slice(1) : ogImage;
+  const ext = path.extname(normalized).toLowerCase();
+  const baseWithoutExt = ext === '.jpg' || ext === '.jpeg'
+    ? normalized.slice(0, -ext.length)
+    : normalized;
+
+  const tryPath = (e: string) => path.join(publicDirectory, baseWithoutExt + e);
+  if (fs.existsSync(tryPath('.jpg'))) return '/' + baseWithoutExt + '.jpg';
+  if (fs.existsSync(tryPath('.jpeg'))) return '/' + baseWithoutExt + '.jpeg';
+  return ogImage;
+}
 
 // Re-export utilities for convenience
 export { generateSlug, calculateReadingTime } from './blog-utils';
@@ -75,7 +97,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
       category: data.category,
       tags: data.tags || [],
       featured: data.featured || false,
-      ogImage: data.ogImage,
+      ogImage: resolveOgImage(data.ogImage),
       readingTime,
       faqSchema: data.faqSchema,
     };
