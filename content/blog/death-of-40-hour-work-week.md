@@ -10,7 +10,7 @@ authorImage: "/assets/logo.png"
 category: "Productivity"
 tags: ["productivity", "automation", "ai", "work-life-balance", "knowledge-work"]
 featured: true
-ogImage: "/blog/death-of-40-hour-work-week/op-image"
+ogImage: "/blog/death-of-40-hour-work-week/og-image"
 faqSchema:
   - question: "How many hours do the most productive knowledge workers work?"
     answer: "The most productive knowledge workers now work around 25 hours per week and get more done than they used to in 40. This is not about working harder—it's about eliminating busy work and focusing exclusively on high-value tasks like strategy, relationships, and decisions."

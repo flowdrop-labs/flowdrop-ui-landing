@@ -10,7 +10,7 @@ authorImage: "/assets/logo.png"
 category: "AI News"
 tags: ["gpt-4o", "openai", "ai-updates", "model-optimization", "ai-development"]
 featured: false
-ogImage: "/blog/gpt-4o-turbo-openai-speed-update/op-image.jpg"
+ogImage: "/blog/gpt-4o-turbo-openai-speed-update/og-image"
 faqSchema:
   - question: "What makes GPT-4o Turbo different from GPT-4?"
     answer: "GPT-4o Turbo is 5× faster than GPT-4, has a doubled context window, lower token costs, and will soon support voice input. It's designed for speed and efficiency without sacrificing quality."

@@ -10,7 +10,7 @@ authorImage: "/assets/logo.png"
 category: "Case Studies"
 tags: ["case-study", "no-code", "success-story", "ecommerce", "automation"]
 featured: false
-ogImage: "/blog/case-study-no-code-tools-50b-market-value/op-image.jpeg"
+ogImage: "/blog/case-study-no-code-tools-50b-market-value/og-image"
 faqSchema:
   - question: "How much time can no-code automation save?"
     answer: "In this case study, one ecommerce business saved 20 hours per week by automating invoice processing, daily summaries, follow-ups, file organization, reports, and task reminders—all without a developer or coding skills."

@@ -10,7 +10,7 @@ authorImage: "/assets/logo.png"
 category: "How-To Guides"
 tags: ["google-sheets", "email-automation", "automation", "no-code", "productivity"]
 featured: false
-ogImage: "/blog/how-to-automate-emails-from-google-sheets/op-image.jpg"
+ogImage: "/blog/how-to-automate-emails-from-google-sheets/og-image"
 faqSchema:
   - question: "Do I need coding experience to automate emails from Google Sheets?"
     answer: "No, Flowdrop is designed for non-coders with an intuitive visual builder. You can create email automation workflows by connecting blocks visually without writing any code."

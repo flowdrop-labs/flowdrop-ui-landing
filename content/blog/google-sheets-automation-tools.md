@@ -10,7 +10,7 @@ authorImage: "/assets/logo.png"
 category: "Tools & Reviews"
 tags: ["google-sheets", "automation-tools", "no-code", "productivity", "comparison"]
 featured: true
-ogImage: "/blog/google-sheets-automation-tools-that-work/op-image.jpg"
+ogImage: "/blog/google-sheets-automation-tools-that-work/og-image"
 faqSchema:
   - question: "What's the easiest Google Sheets automation tool for beginners?"
     answer: "Flowdrop is built for people who don't code. You just chat about what you need and it builds the automation for you. No nodes, no setup pain."

@@ -10,7 +10,7 @@ authorImage: "/assets/logo.png"
 category: "Product Updates"
 tags: ["product-update", "human-in-the-loop", "automation", "no-code", "apify", "telegram", "workflow-automation"]
 featured: true
-ogImage: "/blog/flowdrop-v1-1-launch-human-in-the-loop-forms/op-image.jpg"
+ogImage: "/blog/flowdrop-v1-1-launch-human-in-the-loop-forms/og-image"
 faqSchema:
   - question: "What are human in the loop forms in Flowdrop?"
     answer: "Human in the loop forms let your workflows pause and ask you questions. You can approve emails before they send, pick which leads to contact, or choose the best image from a batch. Automation handles the boring parts, you handle the decisions."

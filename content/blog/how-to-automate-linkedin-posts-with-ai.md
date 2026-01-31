@@ -11,7 +11,7 @@ authorImage: "/assets/logo.png"
 category: "How-To Guides"
 tags: ["linkedin", "ai-automation", "content-creation", "social-media", "no-code", "productivity"]
 featured: true
-ogImage: "/blog/how-to-automate-linkedin-posts-with-ai/op-image.jpg"
+ogImage: "/blog/how-to-automate-linkedin-posts-with-ai/og-image"
 faqSchema:
   - question: "Do I need coding experience to automate LinkedIn posts with AI?"
     answer: "No, Flowdrop is designed for non-coders with an intuitive chat interface. You can create LinkedIn automation workflows by describing what you want in plain English, and the AI builds it for you."

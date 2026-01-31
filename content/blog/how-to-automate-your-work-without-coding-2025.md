@@ -11,7 +11,7 @@ authorImage: "/assets/logo.png"
 category: "How-To Guides"
 tags: ["automation", "no-code", "productivity", "workflow-automation", "beginners", "time-saving"]
 featured: true
-ogImage: "/blog/how-to-automate-your-work-without-coding-2025/op-image.jpg"
+ogImage: "/blog/how-to-automate-your-work-without-coding-2025/og-image"
 faqSchema:
   - question: "Do I need coding skills to automate my work in 2025?"
     answer: "No coding skills required. Modern no-code automation tools like Flowdrop use conversational AI that understands plain English. You simply describe what you want to automate (like 'when someone fills out my contact form, add them to my Google Sheet and send me a Slack notification'), and the AI builds the entire workflow for you. The system handles all technical aspects including API connections, data formatting, and error handling automatically. If you can write a sentence, you can build professional-grade automations."

@@ -15,8 +15,9 @@ const publicDirectory = path.join(process.cwd(), 'public');
 
 /**
  * Resolve ogImage to an existing file, accepting either .jpg or .jpeg.
- * If the path in frontmatter ends with .jpg or .jpeg, checks for that file first,
- * then tries the other extension. Returns the URL path that exists, or the original.
+ * Use a path without extension (e.g. /blog/slug/og-image) to auto-pick whichever
+ * exists on disk. If the path includes .jpg or .jpeg, both are tried; returns
+ * the URL that exists, or the original.
  */
 function resolveOgImage(ogImage: string | undefined): string | undefined {
   if (!ogImage) return undefined;
