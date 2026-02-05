@@ -87,18 +87,6 @@ export const mobileStories: MobileStory[] = [
     },
   },
   {
-    title: 'Build with Chat',
-    copy: 'Natural conversations that create powerful workflows. Like Cursor, but for automation.',
-    screenshot: {
-      url: 'flowdrop.ai/build-with-chat',
-      src: '/screenshots/buildwithchatfeature.png',
-      alt: 'Flowdrop Build with Chat',
-      width: 250,
-      height: 300,
-      label: { text: 'build with chat', colorClass: 'bg-purple-500/20 backdrop-blur-sm border border-purple-500/30 text-purple-400 px-2 py-1' },
-    },
-  },
-  {
     title: 'Advanced AI Node Editing',
     copy: 'Fine-tune AI nodes with precision. Custom logic for complex workflows.',
     screenshot: {

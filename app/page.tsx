@@ -60,9 +60,9 @@ export default function LandingPage() {
             subtitleClassName={cn(typography.bodyLarge, 'text-text-secondary')}
           />
 
-          {/* Desktop Layout */}
-          <div className="hidden lg:block max-w-7xl mx-auto relative">
-            <div className="grid lg:grid-cols-2 gap-8 items-start">
+          {/* Screenshot Layout - stacked on mobile, 2-col on desktop */}
+          <div className="max-w-7xl mx-auto relative">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
               
               {/* Left Column - Main Workflow Editor */}
               <motion.div 
@@ -166,30 +166,6 @@ export default function LandingPage() {
                 />
                 <div className="absolute bottom-2 left-2 bg-orange-500/20 backdrop-blur-sm border border-orange-500/30 rounded-lg px-2 py-1">
                   <span className="text-xs font-semibold text-orange-400">AI node editing</span>
-                </div>
-              </div>
-            </BrowserWindowFrame>
-          </motion.div>
-
-          {/* Team Collaboration */}
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            viewport={{ once: true, margin: "-50px" }}
-            className="absolute top-1/2 left-8 transform -translate-y-1/2 translate-y-[-200px] z-30 hidden lg:block"
-          >
-            <BrowserWindowFrame url="flowdrop.ai/build-with-chat" className="rounded-lg" headerVariant="compact">
-              <div className="relative">
-                <Image 
-                  src="/screenshots/buildwithchatfeature.png" 
-                  alt="Flowdrop Build with Chat"
-                  width={250}
-                  height={300}
-                  className="w-full h-auto object-contain"
-                />
-                <div className="absolute bottom-2 left-2 bg-purple-500/20 backdrop-blur-sm border border-purple-500/30 rounded-lg px-2 py-1">
-                  <span className="text-xs font-semibold text-purple-400">build with chat</span>
                 </div>
               </div>
             </BrowserWindowFrame>

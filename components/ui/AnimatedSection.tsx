@@ -12,7 +12,7 @@ type AnimatedSectionProps = {
 
 export default function AnimatedSection({ children, className = "", delay = 0, direction }: AnimatedSectionProps) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-300px" });
+  const isInView = useInView(ref, { once: true, margin: "-80px", amount: 0.2 });
 
   let initial: any, animate: any;
   if (direction === 'left') {

@@ -17,7 +17,7 @@ export default function TestimonialsSection() {
             className="max-w-4xl mx-auto"
           />
 
-          <div className="grid grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {testimonials.map((t, idx) => (
               <motion.div
                 key={idx}
@@ -28,7 +28,7 @@ export default function TestimonialsSection() {
                 whileHover={{ scale: 1.02, y: -4 }}
                 transition={{ duration: 0.6, delay: 0.1 * (idx + 1), ease: 'easeOut' }}
               >
-                <div className="bg-gradient-to-br from-neutral-800/60 to-neutral-700/40 backdrop-blur-sm border border-white/10 rounded-4xl p-6 relative group hover:border-primary-main/30 hover:shadow-[0_8px_32px_0_rgba(139,92,246,0.15)] transition-all duration-500">
+                <div className="bg-gradient-to-br from-neutral-800/60 to-neutral-700/40 backdrop-blur-sm border border-white/10 rounded-2xl sm:rounded-4xl p-5 sm:p-6 relative group hover:border-primary-main/30 hover:shadow-[0_8px_32px_0_rgba(139,92,246,0.15)] transition-all duration-500">
                   <div className="relative z-10">
                     <div className="flex items-start gap-3 mb-4">
                       <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-semibold text-sm bg-gradient-to-br from-gray-600 to-gray-700 border border-gray-500/30">
