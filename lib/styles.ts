@@ -132,7 +132,25 @@ export const inputVariants = {
 export const cardVariants = {
   default: 'bg-background-card rounded-4xl border border-border-primary shadow-lg p-6',
   glass: 'bg-background-glass backdrop-blur-lg border border-white/10 rounded-4xl shadow-xl p-6',
+  /** Like glass but no backdrop-blur – use for hover-transformed cards to avoid compositing tearing */
+  glassSolid: 'bg-background-card/90 border border-white/10 rounded-4xl shadow-xl p-6',
   elevated: 'bg-background-card rounded-4xl border border-border-primary shadow-2xl p-6',
+} as const;
+
+/** Shared landing page card styling – use with Card variant="glass" (and hover where noted) */
+export const landingCard = {
+  /** Feature cards (Why Flowdrop? grid) – use with hover */
+  feature:
+    'p-6 border-primary-main/20 shadow-[0_4px_24px_0_rgba(20,20,40,0.18)] relative overflow-hidden group hover:shadow-[0_8px_32px_0_rgba(139,92,246,0.15)] transition-all duration-500',
+  /** Pain-point cards (You've felt this) – use with hover; no transition here so .card-smooth controls hover */
+  pain: 'p-6 border-primary-main/10 hover:border-primary-main/30',
+  /** CTA cards (That's why we built Flowdrop / You've always known…) – same look for both */
+  cta:
+    'p-8 border-primary-main/30 bg-gradient-to-r from-primary-main/10 to-purple-700/10 shadow-[0_4px_24px_0_rgba(20,20,40,0.18)] relative overflow-hidden group hover:shadow-[0_8px_32px_0_rgba(139,92,246,0.15)] transition-all duration-500 rounded-4xl',
+  /** CTA "That's why we built Flowdrop" – minimal hover: subtle scale */
+  ctaFlowdropHover: 'hover:scale-[1.02] transition-transform duration-300',
+  /** CTA "You've always known..." – minimal hover: subtle lift */
+  ctaWhyHover: 'hover:-translate-y-1 transition-transform duration-300',
 } as const;
 
 // Animation utilities

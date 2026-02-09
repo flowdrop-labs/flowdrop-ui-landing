@@ -8,11 +8,13 @@ interface CardProps {
   children: React.ReactNode;
   variant?: keyof typeof cardVariants;
   hover?: boolean;
+  /** When true with hover, use card-smooth only (no card-hover-glow). Use for pain cards to avoid mask/compositing tearing. */
+  noGlow?: boolean;
   className?: string;
 }
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ className, children, variant = 'default', hover = false }, ref) => {
+  ({ className, children, variant = 'default', hover = false, noGlow = false }, ref) => {
     return (
       <div
         ref={ref}
@@ -20,7 +22,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
           cardVariants[variant],
           'transition-all duration-500 ease-out p-6',
           hover && [
-            'card-hover-glow card-smooth',
+            noGlow ? 'card-smooth' : 'card-hover-glow card-smooth',
             'hover:border-primary-main/30',
             'hover:bg-gradient-to-br hover:from-background-glass hover:to-background-card',
             'hover:shadow-[0_20px_40px_-15px_rgba(139,92,246,0.3)]',

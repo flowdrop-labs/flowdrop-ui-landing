@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { AnimatedSection, Section, Card } from '@/components/ui';
-import { typography } from '@/lib/styles';
+import { typography, landingCard } from '@/lib/styles';
 import { cn } from '@/lib/utils';
 import { X, AlertCircle, BookOpen } from 'lucide-react';
 
@@ -28,7 +28,7 @@ export default function AudienceSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
-                <Card variant="glass" className="p-6 border-primary-main/10 hover:border-primary-main/30 transition-all duration-300">
+                <Card variant="glassSolid" hover noGlow className={landingCard.pain}>
                   <div className="flex items-center gap-4">
                     <div className="p-3 bg-primary-main/10 rounded-xl flex-shrink-0">
                       <AlertCircle className="w-7 h-7 text-primary-main" />
@@ -46,7 +46,7 @@ export default function AudienceSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-                <Card variant="glass" className="p-6 border-primary-main/10 hover:border-primary-main/30 transition-all duration-300">
+                <Card variant="glassSolid" hover noGlow className={landingCard.pain}>
                   <div className="flex items-center gap-4">
                     <div className="p-3 bg-primary-main/10 rounded-xl flex-shrink-0">
                       <BookOpen className="w-7 h-7 text-primary-main" />
@@ -64,7 +64,7 @@ export default function AudienceSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                <Card variant="glass" className="p-6 border-primary-main/10 hover:border-primary-main/30 transition-all duration-300">
+                <Card variant="glassSolid" hover noGlow className={landingCard.pain}>
                   <div className="flex items-center gap-4">
                     <div className="p-3 bg-primary-main/10 rounded-xl flex-shrink-0">
                       <X className="w-7 h-7 text-primary-main" />
@@ -85,10 +85,13 @@ export default function AudienceSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <Card variant="glass" className="p-8 border-primary-main/30 bg-gradient-to-r from-primary-main/10 to-purple-700/10 inline-block">
-                <p className={cn(typography.bodyLarge, "font-semibold text-primary-main")}>
-                  That's why we built Flowdrop
-                </p>
+              <Card variant="glass" className={cn(landingCard.cta, landingCard.ctaFlowdropHover, "inline-block")}>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-main/5 via-transparent to-purple-700/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-4xl" />
+                <div className="relative z-10">
+                  <p className={cn(typography.bodyLarge, "font-semibold text-primary-light group-hover:text-primary-main transition-colors duration-300")}>
+                    That's why we built Flowdrop
+                  </p>
+                </div>
               </Card>
             </motion.div>
           </div>
