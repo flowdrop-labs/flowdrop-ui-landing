@@ -36,20 +36,26 @@ export default function LandingPage() {
         <SubtleRain />
       </div>
       
-      {/* Hero Section */}
+      {/* 1. HOOK — Arrest attention with the transformation promise */}
       <HeroSection />
 
-      {/* Why Flowdrop Section */}
+      {/* 2. EMPATHY — Meet them where they are. They feel SEEN. */}
+      <AudienceSection />
+
+      {/* 3. AGITATE — Show the cost of their current approach. Twist the knife. */}
+      <TraditionalComparisonSection />
+
+      {/* 4. SOLUTION — Now that they feel the pain, present the relief */}
       <WhySection />
 
-      {/* Video Section */}
+      {/* 5. SHOW — They want to see it now. Prove it's real. */}
       <VideoSection 
         videoId="xB7Y4vgSXlo"
         title="See Flowdrop in Action"
         subtitle="Watch how easy it is to build powerful automations"
       />
 
-      {/* Your Edge With Flowdrop - Clean Real Screenshots Section */}
+      {/* 6. DEEPEN — Reinforce with product visuals */}
       <section className="py-12 lg:py-20 relative z-10 overflow-hidden">
         <div className="container mx-auto px-6">
           {/* Header */}
@@ -209,18 +215,16 @@ export default function LandingPage() {
       {/* Mobile Layout - Story-Driven Experience */}
       <MobileStoriesSection />
 
-      {/* Use Case Marquee */}
+      {/* 7. EXPAND — "Can this work for MY thing?" Yes. */}
       <UseCaseMarqueeSection />
 
-      <AudienceSection />
-
+      {/* 8. VALIDATE — Real people, real love */}
       <TestimonialsSection />
 
-      {/* Traditional vs Flowdrop Comparison */}
-      <TraditionalComparisonSection />
-
+      {/* 9. AUTHORITY — Built by pros from Apple, Meta, Capital One */}
       <CompanyLogosSection />
 
+      {/* 10. CONVERT — The only logical next step */}
       <FinalCTASection />
 
 

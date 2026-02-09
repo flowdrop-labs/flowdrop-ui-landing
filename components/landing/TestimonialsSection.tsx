@@ -11,7 +11,7 @@ function TestimonialCard({ t, className }: { t: (typeof testimonials)[0]; classN
   return (
     <div
       className={cn(
-        "flex-shrink-0 w-[320px] sm:w-[380px] rounded-2xl p-5 sm:p-6",
+        "flex-shrink-0 w-[320px] sm:w-[380px] rounded-4xl p-5 sm:p-6",
         "bg-gradient-to-br from-neutral-800/60 to-neutral-700/40 backdrop-blur-sm",
         "border border-white/10 hover:border-primary-main/20",
         "transition-colors duration-300",

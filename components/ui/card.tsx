@@ -14,14 +14,13 @@ interface CardProps {
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
   ({ className, children, variant = 'default', hover = false }, ref) => {
     return (
-      <motion.div
+      <div
         ref={ref}
         className={cn(
           cardVariants[variant],
           'transition-all duration-500 ease-out p-6',
           hover && [
             'card-hover-glow card-smooth',
-            'hover:shadow-2xl hover:-translate-y-2',
             'hover:border-primary-main/30',
             'hover:bg-gradient-to-br hover:from-background-glass hover:to-background-card',
             'hover:shadow-[0_20px_40px_-15px_rgba(139,92,246,0.3)]',
@@ -29,17 +28,9 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
           ],
           className
         )}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        whileHover={hover ? { 
-          scale: 1.03,
-          transition: { duration: 0.3, ease: "easeOut" }
-        } : undefined}
-        whileTap={hover ? { scale: 0.98 } : undefined}
       >
         {children}
-      </motion.div>
+      </div>
     );
   }
 );
