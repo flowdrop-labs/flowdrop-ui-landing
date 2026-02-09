@@ -12,24 +12,10 @@ export default function AudienceSection() {
     <Section>
       <AnimatedSection className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className={cn(typography.h2, "mb-6")}>Built for people who'd rather do the work than learn the tool.</h2>
-            <p className={cn(typography.bodyLarge, "text-text-secondary max-w-3xl mx-auto mb-6")}>
-              You're not a developer. You're not trying to become one. You just want AI that works, connected to your apps, running while you focus on what matters.
+            <h2 className={cn(typography.h2, "mb-4")}>Built for people doing the work of 10.</h2>
+            <p className={cn(typography.bodyLarge, "text-text-secondary max-w-3xl mx-auto")}>
+              You don't have time to learn another tool.
             </p>
-            <div className="flex flex-wrap justify-center gap-3 mt-8">
-              {['Founders', 'Creators', 'Marketers', 'Agencies', 'Teams of one doing the work of ten'].map((role, idx) => (
-                <motion.span
-                  key={idx}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: idx * 0.1 }}
-                  className="px-4 py-2 bg-primary-main/10 border border-primary-main/20 rounded-full text-sm font-semibold text-primary-main"
-                >
-                  {role}
-                </motion.span>
-              ))}
-            </div>
           </div>
 
           <div className="mb-16">

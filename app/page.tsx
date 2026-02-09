@@ -14,6 +14,8 @@ const VideoSection = dynamic(() => import('@/components/landing/VideoSection'), 
 const AudienceSection = dynamic(() => import('@/components/landing/AudienceSection'), { ssr: false });
 const TestimonialsSection = dynamic(() => import('@/components/landing/TestimonialsSection'), { ssr: false });
 const CompanyLogosSection = dynamic(() => import('@/components/landing/CompanyLogosSection'), { ssr: false });
+const UseCaseMarqueeSection = dynamic(() => import('@/components/landing/UseCaseMarqueeSection'), { ssr: false });
+const TraditionalComparisonSection = dynamic(() => import('@/components/landing/TraditionalComparisonSection'), { ssr: false });
 import HeroSection from '@/components/landing/HeroSection';
 import MobileStoriesSection from '@/components/landing/MobileStoriesSection';
 
@@ -60,9 +62,9 @@ export default function LandingPage() {
             subtitleClassName={cn(typography.bodyLarge, 'text-text-secondary')}
           />
 
-          {/* Screenshot Layout - stacked on mobile, 2-col on desktop */}
+          {/* Screenshot Layout - hidden on mobile (MobileStoriesSection covers these), 2-col on desktop */}
           <div className="max-w-7xl mx-auto relative">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
+            <div className="hidden lg:grid grid-cols-2 gap-6 lg:gap-8 items-start">
               
               {/* Left Column - Main Workflow Editor */}
               <motion.div 
@@ -207,10 +209,15 @@ export default function LandingPage() {
       {/* Mobile Layout - Story-Driven Experience */}
       <MobileStoriesSection />
 
+      {/* Use Case Marquee */}
+      <UseCaseMarqueeSection />
 
       <AudienceSection />
 
       <TestimonialsSection />
+
+      {/* Traditional vs Flowdrop Comparison */}
+      <TraditionalComparisonSection />
 
       <CompanyLogosSection />
 

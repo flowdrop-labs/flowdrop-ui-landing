@@ -32,6 +32,7 @@ export default function Header({ hideAtTopOnLanding = false, isAuthPage = false 
   const [loading, setLoading] = useState(true);
   const [isSignOutHovered, setIsSignOutHovered] = useState(false);
   const [isLoginHovered, setIsLoginHovered] = useState(false);
+  const [isGetStartedHovered, setIsGetStartedHovered] = useState(false);
   const pathname = usePathname();
   const isDocsPage = pathname.startsWith('/docs');
 
@@ -209,23 +210,99 @@ export default function Header({ hideAtTopOnLanding = false, isAuthPage = false 
             {/* Desktop Navigation - centered to viewport */}
             <Navigation pathname={pathname} className="md:absolute md:left-1/2 md:-translate-x-1/2 md:z-10" />
 
-            {/* CTA Buttons */}
-            <AuthButtons 
-              user={user} 
-              loading={loading} 
-              onSignOut={handleSignOut}
-              className="hidden md:flex"
-            />
+            {/* CTA Buttons - Show "Get Started" on landing page when scrolled, otherwise show Auth */}
+            <AnimatePresence mode="wait">
+              {pathname === '/' && showFullHeader && !user && !loading ? (
+                <motion.div
+                  key="get-started-cta"
+                  className="hidden md:flex items-center"
+                  initial={{ opacity: 0, x: 10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 10 }}
+                  transition={{ duration: 0.35, delay: 0.15 }}
+                >
+                  <motion.button
+                    onClick={() => window.location.href = 'https://app.flowdrop.ai/'}
+                    className="h-10 px-6 text-white text-sm font-semibold rounded-full shadow-lg shadow-primary-main/25 ring-2 ring-primary-main/20 group relative overflow-hidden btn-liquid"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                    onHoverStart={() => setIsGetStartedHovered(true)}
+                    onHoverEnd={() => setIsGetStartedHovered(false)}
+                  >
+                    <div className="relative flex items-center justify-center">
+                      <motion.div
+                        className="flex items-center gap-2"
+                        variants={{
+                          default: { x: 0 },
+                          hover: { x: -8 }
+                        }}
+                        initial="default"
+                        animate={isGetStartedHovered ? "hover" : "default"}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                      >
+                        <span>Get Started</span>
+                        <motion.div
+                          className="absolute flex items-center"
+                          variants={{
+                            default: { opacity: 0, x: -10 },
+                            hover: { opacity: 1, x: 0 }
+                          }}
+                          animate={isGetStartedHovered ? "hover" : "default"}
+                          transition={{ duration: 0.3, ease: "easeInOut" }}
+                          style={{ left: "100%", marginLeft: "0.5rem" }}
+                        >
+                          <ArrowRight className="w-4 h-4" />
+                        </motion.div>
+                      </motion.div>
+                    </div>
+                  </motion.button>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="auth-buttons"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <AuthButtons 
+                    user={user} 
+                    loading={loading} 
+                    onSignOut={handleSignOut}
+                    className="hidden md:flex"
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
 
-            {/* Mobile Menu */}
-            <MobileMenu 
-              isOpen={isMobileMenuOpen}
-              onToggle={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              pathname={pathname}
-              user={user}
-              loading={loading}
-              onSignOut={handleSignOut}
-            />
+            {/* Mobile Get Started + Menu */}
+            <div className="flex items-center gap-3 md:hidden">
+              <AnimatePresence>
+                {pathname === '/' && showFullHeader && !user && !loading && (
+                  <motion.button
+                    key="mobile-get-started"
+                    onClick={() => window.location.href = 'https://app.flowdrop.ai/'}
+                    className="h-9 px-5 text-white text-sm font-semibold rounded-full shadow-lg shadow-primary-main/25 ring-2 ring-primary-main/20 relative overflow-hidden btn-liquid"
+                    initial={{ opacity: 0, scale: 0.9, x: 10 }}
+                    animate={{ opacity: 1, scale: 1, x: 0 }}
+                    exit={{ opacity: 0, scale: 0.9, x: 10 }}
+                    transition={{ duration: 0.3, delay: 0.1 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Get Started
+                  </motion.button>
+                )}
+              </AnimatePresence>
+              <MobileMenu 
+                isOpen={isMobileMenuOpen}
+                onToggle={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                pathname={pathname}
+                user={user}
+                loading={loading}
+                onSignOut={handleSignOut}
+              />
+            </div>
         </div>
       </motion.header>
 

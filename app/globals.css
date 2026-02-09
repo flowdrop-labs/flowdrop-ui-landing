@@ -266,6 +266,29 @@ html {
   animation-play-state: paused;
 }
 
+/* Use-case marquee - seamless horizontal scroll */
+@keyframes usecase-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% / var(--marquee-copies, 4)));
+  }
+}
+
+.animate-usecase-marquee {
+  animation: usecase-marquee var(--duration, 45s) linear infinite;
+  will-change: transform;
+}
+
+.animate-usecase-marquee.reverse {
+  animation-direction: reverse;
+}
+
+.group:hover .animate-usecase-marquee {
+  animation-play-state: paused;
+}
+
 /* Card entrance animation */
 @keyframes cardEntrance {
   from {

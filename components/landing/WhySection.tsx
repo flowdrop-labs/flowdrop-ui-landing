@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardTitle, AnimatedSection, SectionHeader, Section } from '@/components/ui';
-import { Brain, MessageSquare, Moon } from 'lucide-react';
+import { Lightbulb, MessageSquare, Heart } from 'lucide-react';
 import { typography } from '@/lib/styles';
 import { cn } from '@/lib/utils';
 
@@ -28,11 +28,11 @@ export default function WhySection() {
                 <CardContent className="pt-4">
                   <div className="flex justify-center mb-6">
                     <div className="p-4 bg-primary-main/20 rounded-4xl">
-                      <Brain className="w-8 h-8 text-primary-main" />
+                      <Lightbulb className="w-8 h-8 text-primary-main" />
                     </div>
                   </div>
-                  <CardTitle className="mb-4 text-center">Your apps. One brain.</CardTitle>
-                  <p className={cn(typography.body, "text-center")}>Everything you use, connected. Your AI sees your email, your calendar, your documents, your socials. It understands your world.</p>
+                  <CardTitle className="mb-4 text-center">You already know what to automate.</CardTitle>
+                  <p className={cn(typography.body, "text-center")}>Describe it in plain English. Flowdrop turns it into live, working agents. No setup. No learning curve.</p>
                 </CardContent>
               </Card>
 
@@ -47,8 +47,8 @@ export default function WhySection() {
                       <MessageSquare className="w-8 h-8 text-primary-main" />
                     </div>
                   </div>
-                  <CardTitle className="mb-4 text-center">Say it. It's built.</CardTitle>
-                  <p className={cn(typography.body, "text-center")}>No learning curve. No technical skills. Describe what you need like you'd tell a friend. Watch it come to life.</p>
+                  <CardTitle className="mb-4 text-center">One conversation. That's it.</CardTitle>
+                  <p className={cn(typography.body, "text-center")}>No triggers. No field mapping. No debugging. You talk. Your agent works.</p>
                 </CardContent>
               </Card>
 
@@ -60,11 +60,11 @@ export default function WhySection() {
                 <CardContent className="pt-4">
                   <div className="flex justify-center mb-6">
                     <div className="p-4 bg-primary-main/20 rounded-4xl">
-                      <Moon className="w-8 h-8 text-primary-main" />
+                      <Heart className="w-8 h-8 text-primary-main" />
                     </div>
                   </div>
-                  <CardTitle className="mb-4 text-center">Works while you live.</CardTitle>
-                  <p className={cn(typography.body, "text-center")}>Your AI doesn't clock out. It handles the busywork at 2 AM so your morning starts with progress, not catch-up.</p>
+                  <CardTitle className="mb-4 text-center">Built for the person who gave up.</CardTitle>
+                  <p className={cn(typography.body, "text-center")}>You tried the tools. Watched the tutorials. Quit because it felt like coding. If you can describe it, you can automate it.</p>
                 </CardContent>
               </Card>
             </div>

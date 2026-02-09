@@ -12,8 +12,8 @@ export default function CompanyLogosSection() {
     <Section borderedTop>
       <AnimatedSection className="max-w-5xl mx-auto">
           <SectionHeader
-            title="Built by Industry Veterans"
-            subtitle="Our team brings decades of experience from the world's most respected companies"
+            title="Built by pros so you don't have to be one."
+            subtitle="Our team has built for the world's biggest consumer software companies."
             align="center"
             level="h2"
             className="max-w-4xl mx-auto mb-16"
