@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import HeaderWrapper from "@/components/HeaderWrapper";
 import PHProvider from "@/components/PostHogProvider";
 import { Footer } from "@/components/ui";
+import { SEO } from "@/lib/seo-constants";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -20,8 +21,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Flowdrop - AI Workflow Builder for Non-Coders",
-  description: "Flowdrop is a no-code, AI-powered workflow builder that deploys production automations in under five minutes.",
+  title: SEO.title,
+  description: SEO.description,
   icons: {
     icon: [
       // Google requires minimum 48x48px - using 96x96px (perfect for search results)
@@ -40,57 +41,41 @@ export const metadata: Metadata = {
       { rel: 'icon', url: '/web-app-manifest-512x512.png', sizes: '512x512', type: 'image/png' }
     ]
   },
-  keywords: [
-    "AI workflow builder",
-    "no-code automation",
-    "ai agents",
-    "agentic ai",
-    "agentic tools",
-    "build your own ai agent", 
-    "workflow automation",
-    "AI automation",
-    "business automation",
-    "workflow builder",
-    "automation platform",
-    "AI workflows",
-    "no-code platform",
-    "business process automation",
-    "productivity tools"
-  ],
+  keywords: [...SEO.keywords],
   authors: [{ name: "Flowdrop Team" }],
-  creator: "Flowdrop",
-  publisher: "Flowdrop",
+  creator: SEO.siteName,
+  publisher: SEO.siteName,
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://flowdrop.ai'),
+  metadataBase: new URL(SEO.siteUrl),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "Flowdrop - AI Workflow Builder for Non-Coders",
-    description: "Flowdrop is a no-code, AI-powered workflow builder that deploys production automations in under five minutes.",
-    url: 'https://flowdrop.ai',
-    siteName: 'Flowdrop',
-    locale: 'en_US',
+    title: SEO.title,
+    description: SEO.description,
+    url: SEO.siteUrl,
+    siteName: SEO.siteName,
+    locale: SEO.locale,
     type: 'website',
     images: [
       {
-        url: 'https://flowdrop.ai/website-preview.png',
+        url: SEO.image,
         width: 1200,
         height: 630,
-        alt: 'Flowdrop - AI Workflow Builder',
+        alt: SEO.imageAlt,
         type: 'image/png',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Flowdrop - AI Workflow Builder for Non-Coders",
-    description: "Flowdrop is a no-code, AI-powered workflow builder that deploys production automations in under five minutes.",
-    images: ['https://flowdrop.ai/website-preview.png'],
+    title: SEO.title,
+    description: SEO.description,
+    images: [SEO.image],
   },
   robots: {
     index: true,
@@ -114,7 +99,7 @@ export const metadata: Metadata = {
     "ICBM": "37.7749, -122.4194",
     "og:image:width": "1200",
     "og:image:height": "630",
-    "twitter:image:alt": "Flowdrop - AI Workflow Builder"
+    "twitter:image:alt": SEO.imageAlt
   },
 };
 
@@ -145,16 +130,13 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Flowdrop",
-              "alternateName": "Flowdrop",
-              "url": "https://flowdrop.ai",
-              "logo": "https://flowdrop.ai/website-preview.png",
-              "description": "Flowdrop is a no-code, AI-powered workflow builder that deploys production automations in under five minutes.",
-              "foundingDate": "2024",
-              "sameAs": [
-                "https://twitter.com/flowdrop",
-                "https://linkedin.com/company/flowdrop"
-              ]
+              "name": SEO.org.name,
+              "alternateName": SEO.org.name,
+              "url": SEO.siteUrl,
+              "logo": SEO.org.logo,
+              "description": SEO.org.description,
+              "foundingDate": SEO.org.foundingDate,
+              "sameAs": SEO.org.sameAs
             })
           }}
         />
@@ -164,12 +146,12 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "Flowdrop",
-              "url": "https://flowdrop.ai",
-              "description": "AI workflow builder for non-coders. Build and deploy production automations in under five minutes.",
+              "name": SEO.siteName,
+              "url": SEO.siteUrl,
+              "description": SEO.schemas.website,
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://flowdrop.ai/search?q={search_term_string}",
+                "target": `${SEO.siteUrl}/search?q={search_term_string}`,
                 "query-input": "required name=search_term_string"
               }
             })
@@ -181,9 +163,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              "name": "Flowdrop",
-              "url": "https://flowdrop.ai",
-              "description": "AI-powered workflow builder that deploys production automations in under five minutes.",
+              "name": SEO.siteName,
+              "url": SEO.siteUrl,
+              "description": SEO.schemas.softwareApp,
               "applicationCategory": "BusinessApplication",
               "operatingSystem": "Web Browser",
               "offers": {

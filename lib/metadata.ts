@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { SEO } from '@/lib/seo-constants';
 
 interface DocsMetadataConfig {
   title: string;
@@ -23,12 +24,12 @@ export function generateDocsMetadata(config: DocsMetadataConfig): Metadata {
     description,
     path,
     keywords = [],
-    image = 'https://flowdrop.ai/website-preview.png',
+    image = SEO.image,
     type = 'website',
   } = config;
 
-  const url = `https://flowdrop.ai${path}`;
-  const fullTitle = title.includes('Flowdrop') ? title : `${title} | Flowdrop Docs`;
+  const url = `${SEO.siteUrl}${path}`;
+  const fullTitle = title.includes(SEO.siteName) ? title : `${title} | ${SEO.siteName} Docs`;
 
   return {
     title: fullTitle,
@@ -47,15 +48,15 @@ export function generateDocsMetadata(config: DocsMetadataConfig): Metadata {
           alt: title,
         },
       ],
-      siteName: 'Flowdrop',
+      siteName: SEO.siteName,
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
       images: [image],
-      site: '@flowdrop',
-      creator: '@flowdrop',
+      site: SEO.twitterHandle,
+      creator: SEO.twitterHandle,
     },
     alternates: {
       canonical: url,
@@ -94,7 +95,7 @@ export function generateArticleSchema(config: {
     path,
     datePublished,
     dateModified,
-    image = 'https://flowdrop.ai/website-preview.png',
+    image = SEO.image,
     keywords = [],
     wordCount,
     timeRequired,
@@ -108,12 +109,12 @@ export function generateArticleSchema(config: {
     image,
     author: {
       '@type': 'Organization',
-      name: 'Flowdrop',
-      url: 'https://flowdrop.ai',
+      name: SEO.org.name,
+      url: SEO.siteUrl,
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Flowdrop',
+      name: SEO.org.name,
       logo: {
         '@type': 'ImageObject',
         url: image,
@@ -123,7 +124,7 @@ export function generateArticleSchema(config: {
     dateModified: dateModified || new Date().toISOString().split('T')[0],
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://flowdrop.ai${path}`,
+      '@id': `${SEO.siteUrl}${path}`,
     },
     keywords: keywords.length > 0 ? keywords : undefined,
     articleSection: 'Documentation',
@@ -154,7 +155,7 @@ export function generateHowToSchema(config: {
     title,
     description,
     path,
-    image = 'https://flowdrop.ai/website-preview.png',
+    image = SEO.image,
     estimatedCost,
     totalTime,
     steps = [],
@@ -177,7 +178,7 @@ export function generateHowToSchema(config: {
       position: index + 1,
       name: step.name,
       text: step.text,
-      url: step.url || `https://flowdrop.ai${path}#step-${index + 1}`,
+      url: step.url || `${SEO.siteUrl}${path}#step-${index + 1}`,
       image: step.image,
     })),
   };
@@ -194,7 +195,7 @@ export function generateBreadcrumbSchema(items: Array<{ name: string; path: stri
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: `https://flowdrop.ai${item.path}`,
+      item: `${SEO.siteUrl}${item.path}`,
     })),
   };
 }
