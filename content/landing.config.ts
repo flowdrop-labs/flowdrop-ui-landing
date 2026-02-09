@@ -55,7 +55,7 @@ export const comparisonItems: ComparisonItem[] = [
 ];
 
 export const hero: HeroContent = {
-  headline: "Ever wish you could hire another you? Now you can.",
+  headline: "Ever wish you could hire ai agents? Now you can.",
   subcopy: 'Clone yourself today. Build AI agents that work while you sleep.',
   ctaHref: 'https://app.flowdrop.ai/',
   ctaText: 'Get Started',
