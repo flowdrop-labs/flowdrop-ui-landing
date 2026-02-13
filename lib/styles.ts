@@ -141,7 +141,7 @@ export const cardVariants = {
 export const landingCard = {
   /** Feature cards (Why Flowdrop? grid) – use with hover */
   feature:
-    'p-6 border-primary-main/20 shadow-[0_4px_24px_0_rgba(20,20,40,0.18)] relative overflow-hidden group hover:shadow-[0_8px_32px_0_rgba(139,92,246,0.15)] transition-all duration-500',
+    'h-full flex flex-col p-6 border-primary-main/20 shadow-[0_4px_24px_0_rgba(20,20,40,0.18)] relative overflow-hidden group hover:shadow-[0_8px_32px_0_rgba(139,92,246,0.15)] transition-all duration-500',
   /** Pain-point cards (You've felt this) – use with hover; no transition here so .card-smooth controls hover */
   pain: 'p-6 border-primary-main/10 hover:border-primary-main/30',
   /** CTA cards (That's why we built Flowdrop / You've always known…) – same look for both */
