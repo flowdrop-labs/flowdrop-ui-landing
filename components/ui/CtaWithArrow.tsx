@@ -15,15 +15,20 @@ type CtaWithArrowProps = {
 export default function CtaWithArrow({ children, onClick, className = '', variant = 'primary', fullWidth = false }: CtaWithArrowProps) {
   const [isHovered, setIsHovered] = useState(false);
 
+  const primaryLiquidClasses = 'h-[56px] px-10 btn-liquid text-white font-semibold rounded-full shadow-lg shadow-primary-main/25 ring-2 ring-primary-main/20 group relative overflow-hidden text-lg';
+  const outlineFadeToLiquidClasses = 'h-[56px] px-10 rounded-full text-lg font-semibold border border-white/20 text-gray-300 hover:text-white btn-liquid-hover transition-all duration-300 group relative overflow-hidden';
+
+  const resolvedClassName = className || (variant === 'primary' ? primaryLiquidClasses : outlineFadeToLiquidClasses);
+
   return (
     <motion.div className={fullWidth ? '' : 'inline-block'} whileHover={{ scale: 1.05 }} transition={{ duration: 0.2, ease: 'easeOut' }}>
       <Button
         variant={variant === 'primary' ? 'primary' : 'outline'}
-        className={className || (variant === 'primary' ? 'h-[56px] px-10 btn-liquid text-white font-semibold rounded-full shadow-lg shadow-primary-main/25 ring-2 ring-primary-main/20 group relative overflow-hidden text-lg' : '')}
+        className={resolvedClassName}
         onClick={onClick}
         whileHover={{ scale: 1.06 }}
-        animate={{ scale: [1, 1.02, 1] }}
-        transition={{ duration: 2, repeat: Infinity, repeatType: 'loop', ease: 'easeInOut' }}
+        animate={variant === 'primary' ? { scale: [1, 1.02, 1] } : undefined}
+        transition={{ duration: variant === 'primary' ? 2 : 0.3, repeat: variant === 'primary' ? Infinity : 0, repeatType: 'loop', ease: 'easeInOut' }}
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
       >

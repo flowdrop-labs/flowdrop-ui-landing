@@ -2,9 +2,10 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Section, AnimatedSection, SectionHeader } from '@/components/ui';
+import { Section, AnimatedSection, SectionHeader, CTAButton, Button } from '@/components/ui';
 import { typography } from '@/lib/styles';
 import { cn } from '@/lib/utils';
+import { useAnalytics } from '@/lib/usePostHog';
 
 interface VideoSectionProps {
   videoId: string;
@@ -19,6 +20,8 @@ export default function VideoSection({
   subtitle = "Watch how easy it is to build powerful automations",
   className 
 }: VideoSectionProps) {
+  const { track } = useAnalytics();
+
   return (
     <Section className={cn("py-12 lg:py-20", className)}>
       <AnimatedSection className="max-w-6xl mx-auto">
@@ -53,16 +56,36 @@ export default function VideoSection({
           <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-purple-500/20 rounded-full blur-sm group-hover:bg-purple-500/30 transition-colors duration-300" />
         </div>
 
-        {/* Optional call-to-action below video */}
+        {/* Call-to-action below video */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="text-center mt-8"
+          className="text-center mt-8 flex flex-col items-center gap-4"
         >
-          <p className={cn(typography.body, "text-text-secondary max-w-2xl mx-auto")}>
-            Ready to build your own automations? Get started in minutes with our intuitive visual builder.
+          <CTAButton
+            onClick={() => {
+              track.buttonClick('Build your first workflow', 'video-section');
+              window.location.href = 'https://app.flowdrop.ai/';
+            }}
+            className="max-w-[300px]"
+          >
+            Build your first workflow
+          </CTAButton>
+          <Button
+            variant="outline"
+            size="sm"
+            className="text-text-secondary border-white/20 hover:border-white/30"
+            onClick={() => {
+              track.buttonClick('Browse docs', 'video-section');
+              window.location.href = '/docs';
+            }}
+          >
+            Browse docs
+          </Button>
+          <p className={cn(typography.body, "text-text-secondary max-w-2xl mx-auto text-sm")}>
+            Get started in minutes. No credit card required.
           </p>
         </motion.div>
       </AnimatedSection>

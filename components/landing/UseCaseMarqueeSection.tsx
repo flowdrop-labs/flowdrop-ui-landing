@@ -1,8 +1,10 @@
 "use client"
 
 import React from 'react';
-import { Section, AnimatedSection } from '@/components/ui';
+import { motion } from 'framer-motion';
+import { Section, AnimatedSection, CTAButton } from '@/components/ui';
 import { useCaseRows } from '@/content/landing.config';
+import { useAnalytics } from '@/lib/usePostHog';
 import type { UseCaseItem } from '@/content/landing.config';
 import { SEO } from '@/lib/seo-constants';
 import {
@@ -131,6 +133,8 @@ function MarqueeRow({ items, direction, copies = 4 }: { items: UseCaseItem[]; di
 }
 
 export default function UseCaseMarqueeSection() {
+  const { track } = useAnalytics();
+
   return (
     <Section borderedTop>
       <AnimatedSection className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-16 flex flex-col gap-8 sm:gap-12">
@@ -169,6 +173,23 @@ export default function UseCaseMarqueeSection() {
         <span className="text-sm sm:text-base text-zinc-400 text-pretty text-center italic">
           PS. Your AI agents can learn any task you describe in plain English
         </span>
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="flex justify-center mt-6"
+        >
+          <CTAButton
+            onClick={() => {
+              track.buttonClick('Build yours', 'use-case-section');
+              window.location.href = 'https://app.flowdrop.ai/';
+            }}
+            className="max-w-[200px]"
+          >
+            Build yours
+          </CTAButton>
+        </motion.div>
       </AnimatedSection>
     </Section>
   );

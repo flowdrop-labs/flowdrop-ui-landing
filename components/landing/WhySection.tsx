@@ -2,12 +2,15 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Card, AnimatedSection, Section } from '@/components/ui';
+import { Card, AnimatedSection, Section, CTAButton } from '@/components/ui';
 import { Lightbulb, MessageSquare, Heart, MessageCircle, Cloud, Globe } from 'lucide-react';
 import { typography, landingCard } from '@/lib/styles';
 import { cn } from '@/lib/utils';
+import { useAnalytics } from '@/lib/usePostHog';
 
 export default function WhySection() {
+  const { track } = useAnalytics();
+
   return (
     <Section>
       <AnimatedSection className="max-w-5xl mx-auto">
@@ -183,6 +186,23 @@ export default function WhySection() {
                   <p className={cn(typography.bodyLarge, "font-semibold text-primary-light group-hover:text-primary-main transition-colors duration-300 italic")}>You've always known AI could help you. Now it actually does.</p>
                 </div>
               </Card>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="mt-8 flex justify-center"
+            >
+              <CTAButton
+                onClick={() => {
+                  track.buttonClick('Describe your first workflow', 'why-section');
+                  window.location.href = 'https://app.flowdrop.ai/';
+                }}
+                className="max-w-[320px]"
+              >
+                Describe your first workflow
+              </CTAButton>
             </motion.div>
           </div>
         </AnimatedSection>

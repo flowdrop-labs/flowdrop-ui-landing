@@ -2,8 +2,9 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Section, AnimatedSection } from '@/components/ui';
+import { Section, AnimatedSection, CTAButton } from '@/components/ui';
 import { traditionalComparison } from '@/content/landing.config';
+import { useAnalytics } from '@/lib/usePostHog';
 
 function GradientDivider() {
   return (
@@ -69,6 +70,7 @@ function parseCallout(text: string) {
 
 export default function TraditionalComparisonSection() {
   const data = traditionalComparison;
+  const { track } = useAnalytics();
 
   return (
     <Section borderedTop>
@@ -153,6 +155,25 @@ export default function TraditionalComparisonSection() {
             </p>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mt-10 sm:mt-14 flex flex-col items-center gap-3"
+        >
+          <p className="text-sm text-zinc-400 italic">Skip the setup.</p>
+          <CTAButton
+            onClick={() => {
+              track.buttonClick('Start in 2 minutes', 'comparison-section');
+              window.location.href = 'https://app.flowdrop.ai/';
+            }}
+            className="max-w-[280px]"
+          >
+            Start in 2 minutes
+          </CTAButton>
+        </motion.div>
       </AnimatedSection>
     </Section>
   );

@@ -1,9 +1,11 @@
 "use client"
 
 import React from 'react';
-import { AnimatedSection, SectionHeader, Section } from '@/components/ui';
+import { motion } from 'framer-motion';
+import { AnimatedSection, SectionHeader, Section, CtaWithArrow } from '@/components/ui';
 import { testimonials } from '@/content/landing.config';
 import { cn } from '@/lib/utils';
+import { useAnalytics } from '@/lib/usePostHog';
 
 const DURATION = 40; // seconds for full loop
 
@@ -35,6 +37,7 @@ function TestimonialCard({ t, className }: { t: (typeof testimonials)[0]; classN
 }
 
 export default function TestimonialsSection() {
+  const { track } = useAnalytics();
   const items = [...testimonials, ...testimonials];
 
   return (
@@ -70,6 +73,23 @@ export default function TestimonialsSection() {
               ))}
             </div>
           </div>
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="flex justify-center mt-12 pb-14 sm:pb-16"
+          >
+            <CtaWithArrow
+              variant="default"
+              onClick={() => {
+                track.buttonClick('Join them', 'testimonials-section');
+                window.location.href = 'https://app.flowdrop.ai/';
+              }}
+            >
+              Join them
+            </CtaWithArrow>
+          </motion.div>
         </AnimatedSection>
     </Section>
   );

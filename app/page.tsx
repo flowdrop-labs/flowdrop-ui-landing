@@ -2,10 +2,11 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Activity, Code } from 'lucide-react';
-import { SlidingBanner, CTAButton, BrowserWindowFrame, LabeledScreenshot, SectionHeader } from '@/components/ui';
+import { Code } from 'lucide-react';
+import { SlidingBanner, CTAButton, BrowserWindowFrame, LabeledScreenshot, SectionHeader, CtaWithArrow } from '@/components/ui';
 import { typography } from '@/lib/styles';
 import { cn } from '@/lib/utils';
+import { useAnalytics } from '@/lib/usePostHog';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import FinalCTASection from '@/components/landing/FinalCTASection';
@@ -28,6 +29,7 @@ const SubtleRain = dynamic(() => import('@/components/SubtleRain'), {
 // AnimatedSection now imported from components/ui
 
 export default function LandingPage() {
+  const { track } = useAnalytics();
 
   return (
     <div className="relative min-h-screen h-full overflow-hidden bg-background text-text-primary" style={{ scrollSnapType: 'y mandatory', scrollBehavior: 'smooth' }}>
@@ -123,37 +125,6 @@ export default function LandingPage() {
           </div>
               
           {/* Strategic Floating Components */}
-          
-          {/* Performance Monitor */}
-          <motion.div 
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true, margin: "-50px" }}
-            className="absolute bottom-32 left-1/2 transform -translate-x-1/2 translate-y-[100px] translate-x-[50px] z-30 hidden lg:block"
-          >
-            <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur-sm border border-green-500/30 rounded-xl p-4 shadow-2xl">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center">
-                  <Activity className="w-4 h-4 text-green-400" />
-                </div>
-                <div>
-                  <div className="text-sm font-semibold text-green-400">Live Dashboard</div>
-                  <div className="text-xs text-gray-400">Monitor Execution Numbers</div>
-                </div>
-              </div>
-              <div className="space-y-2">
-                <div className="flex justify-between text-xs">
-                  <span className="text-gray-400">Total Executions</span>
-                  <span className="text-green-400">1.2M</span>
-                </div>
-                <div className="flex justify-between text-xs">
-                  <span className="text-gray-400">Active Workflows</span>
-                  <span className="text-green-400">847</span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
 
           {/* Node Editor Card */}
           <motion.div 
@@ -207,6 +178,25 @@ export default function LandingPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent rounded-lg"></div>
               </div>
             </div>
+          </motion.div>
+
+          {/* Screenshots section CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true, margin: "-50px" }}
+            className="mt-24 lg:mt-32 flex justify-center"
+          >
+            <CtaWithArrow
+              variant="default"
+              onClick={() => {
+                track.buttonClick('Try the visual builder', 'screenshots-section');
+                window.location.href = 'https://app.flowdrop.ai/';
+              }}
+            >
+              Try the visual builder
+            </CtaWithArrow>
           </motion.div>
 
         </div>

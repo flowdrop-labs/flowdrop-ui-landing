@@ -2,12 +2,15 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { AnimatedSection, Section, Card } from '@/components/ui';
+import { AnimatedSection, Section, Card, CtaWithArrow } from '@/components/ui';
 import { typography, landingCard } from '@/lib/styles';
 import { cn } from '@/lib/utils';
 import { X, AlertCircle, BookOpen } from 'lucide-react';
+import { useAnalytics } from '@/lib/usePostHog';
 
 export default function AudienceSection() {
+  const { track } = useAnalytics();
+
   return (
     <Section>
       <AnimatedSection className="max-w-5xl mx-auto">
@@ -93,6 +96,23 @@ export default function AudienceSection() {
                   </p>
                 </div>
               </Card>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="mt-8 flex justify-center"
+            >
+              <CtaWithArrow
+                variant="default"
+                onClick={() => {
+                  track.buttonClick('See how it works', 'audience-section');
+                  window.location.href = 'https://app.flowdrop.ai/';
+                }}
+              >
+                See how it works
+              </CtaWithArrow>
             </motion.div>
           </div>
       </AnimatedSection>

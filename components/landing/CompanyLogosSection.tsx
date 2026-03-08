@@ -3,11 +3,14 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { AnimatedSection, SectionHeader, Section } from '@/components/ui';
+import { AnimatedSection, SectionHeader, Section, CTAButton } from '@/components/ui';
 import { hoverTransforms } from '@/lib/motion';
 import { companyLogos } from '@/content/landing.config';
+import { useAnalytics } from '@/lib/usePostHog';
 
 export default function CompanyLogosSection() {
+  const { track } = useAnalytics();
+
   return (
     <Section borderedTop>
       <AnimatedSection className="max-w-5xl mx-auto">
@@ -37,6 +40,23 @@ export default function CompanyLogosSection() {
               </motion.div>
             ))}
           </div>
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="flex justify-center"
+          >
+            <CTAButton
+              onClick={() => {
+                track.buttonClick('Get started', 'logos-section');
+                window.location.href = 'https://app.flowdrop.ai/';
+              }}
+              className="max-w-[220px]"
+            >
+              Get started
+            </CTAButton>
+          </motion.div>
         </AnimatedSection>
     </Section>
   );
